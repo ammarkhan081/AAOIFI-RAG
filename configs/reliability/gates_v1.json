@@ -1,0 +1,38 @@
+{
+  "_file": "configs/reliability/gates_v1.json",
+  "_purpose": "Versioned thresholds and switches for aaoifi_rag.reliability.policy.SelectivePredictionPolicy. Load with PolicyConfig.from_json_file(); the values below are the defaults the n=7 replay was run with, written out so a run can be reproduced from configuration rather than from source.",
+  "_verification_note": "Nothing in this file is a Shari'ah ruling. Every gate is a mechanical text check over the retrieved context and the model's own output.",
+
+  "policy_version": "gates_v1",
+
+  "_max_echo_ratio": "Word-shingle (8-word) verbatim overlap between answer and context at or above which the answer is treated as transcription rather than an answer, and routed ESCALATE. 0.85 sits in the gap between the only three observed answer attempts at n=7: H01 0.443, H05 0.717, H03 0.900. Three points. Provisional and the single most likely threshold to move once n grows.",
+  "max_echo_ratio": 0.85,
+  "enable_echo_gate": true,
+
+  "_enable_heading_only_gate": "Pre-generation. Abstains when every retrieved record looks like a clause heading rather than a normative sentence. Calibrated against real contexts: clause:SS9:8 (12 words, no terminal punctuation) and clause:SS17:5/1 (4 words) are headings; clause:SS17:5/2/2 (58 words, no terminal period) is not.",
+  "enable_heading_only_gate": true,
+
+  "_enable_citation_gate": "Escalates on a mechanically detectable citation failure: a [n] marker outside the context range, or a segment whose text matches a different rank better than the one it cites. UNVERIFIED segments (paraphrase or fabrication - indistinguishable without entailment checking) deliberately do NOT gate.",
+  "enable_citation_gate": true,
+
+  "_enable_clause_grounding_gate": "ON, and unlike the three switches below there is no threshold here and nothing calibrated. Escalates when a clause path the answer names in prose (SS8 2/4/1) does not correspond to any clause actually retrieved - the prose-citation companion to enable_citation_gate, which checks only the [n] rank markers. Decidable from the context block alone, so the corpus index refines the diagnosis and never the verdict. Fires on NONE of the seven stored items: only H01 names a clause path and both of its distinct references are grounded, so enabling it moved no n=7 decision. Its extractor was measured instead of its firing rate: 36/36 genuine cross-references over all 362 corpus clause texts, zero over-extraction of Mudarabah profit ratios, zero under-extraction. Note that 6 of 7 GOLD answers would trip this gate - correctly, because they were authored with the full standards open and cite clauses retrieval did not return; that is a property of the gold answers, not a false-positive rate.",
+  "enable_clause_grounding_gate": true,
+
+  "_enable_script_gate": "Escalates when the response contains CJK / Hangul / Cyrillic / Arabic-script characters absent from the English context. Ported from validate_summary_text in scripts/colab_sac_build.py.",
+  "enable_script_gate": true,
+
+  "_enable_degenerate_decoding_gate": "Escalates on long repeated-character runs. Untested at n=7 - greedy decoding produced none - so this is a prompt-contract guard, not an observed failure mode.",
+  "enable_degenerate_decoding_gate": true,
+
+  "_min_reranker_top_1": "OFF ON PURPOSE. reports/reliability_signal_analysis_n7.md found reranker top-1 score does NOT predict retrieval completeness or response class at n=7. Enabling this gate would contradict the project's own negative finding. The switch exists so the rejection is visible in configuration, not only in prose. Do not enable without a fresh analysis at larger n.",
+  "min_reranker_top_1": null,
+  "enable_reranker_top_1_gate": false,
+
+  "_min_reranker_margin": "OFF. The top-1/top-2 margin is computed and recorded on every trace but has never been analysed against outcomes, so gating on it would be a guess dressed as a signal.",
+  "min_reranker_margin": null,
+  "enable_reranker_margin_gate": false,
+
+  "_min_anchor_coverage": "OFF ON PURPOSE, and this one was actually measured against a negative class. reports/anchoring_gate_calibration.md sweeps IDF-weighted query-to-context anchor coverage over the 7 answerable hard-set items and the 25 probes in data/probes/unanswerable_probes.jsonl. Separability against the 11 NON-CIRCULAR probes is AUC 0.513 - chance. 0.25 is recorded because it is the largest threshold with 0/7 false positives, but at that threshold the true-positive rate on the valid probes is also 0/11, so the gate buys nothing. Enabling it would trade false abstentions for no detection. The value is the starting point for a re-calibration at larger n, not a live setting.",
+  "min_anchor_coverage": null,
+  "enable_anchoring_gate": false
+}

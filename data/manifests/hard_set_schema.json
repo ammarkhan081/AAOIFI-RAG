@@ -1,0 +1,137 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "hard_set_schema.json",
+  "title": "AAOIFI Stage 1 Pilot Hard-Set Item",
+  "description": "Schema only. Hard-set content is authored privately by the researcher and must be grounded in the received source corpus.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "item_id",
+    "question_text",
+    "standard_ids",
+    "gold_clause_ids",
+    "gold_answer",
+    "status",
+    "verification_basis",
+    "answerability",
+    "expected_behavior",
+    "notes"
+  ],
+  "properties": {
+    "item_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Unique, stable identifier assigned by the human author."
+    },
+    "question_text": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Human-authored question grounded in the private source corpus."
+    },
+    "standard_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "description": "AAOIFI standards referenced by the item.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "SS8",
+          "SS9",
+          "SS13",
+          "SS17",
+          "SS26"
+        ]
+      }
+    },
+    "gold_clause_ids": {
+      "type": "array",
+      "minItems": 1,
+      "description": "One or more source-faithful, unambiguous clause references supporting the item.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "standard_id",
+          "clause_id",
+          "occurrence_index"
+        ],
+        "properties": {
+          "standard_id": {
+            "type": "string",
+            "enum": [
+              "SS8",
+              "SS9",
+              "SS13",
+              "SS17",
+              "SS26"
+            ]
+          },
+          "clause_id": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Clause identifier exactly as extracted from the source."
+          },
+          "occurrence_index": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Source-faithful duplicate-clause disambiguator; use 0 where the identifier occurs once."
+          },
+          "sub_clause_id": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Optional source sub-clause identifier when the supporting record is a sub-clause."
+          }
+        }
+      }
+    },
+    "answerability": {
+      "type": "string",
+      "enum": [
+        "answerable",
+        "genuinely_ambiguous",
+        "disagreement_prone"
+      ],
+      "description": "Human judgment about whether the supplied source basis supports a direct answer."
+    },
+    "expected_behavior": {
+      "type": "string",
+      "enum": [
+        "answer",
+        "abstain",
+        "escalate"
+      ],
+      "description": "Expected system behavior for this item; this is not a Shari'ah ruling."
+    },
+    "gold_answer": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Human-authored, corpus-grounded answer. Must cite actual clause text; paraphrase from memory is not acceptable."
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "reviewed",
+        "scholar_validated"
+      ],
+      "description": "Lifecycle state of the item. 'reviewed' means corpus cross-reference complete; 'scholar_validated' means additionally reviewed by a qualified Shari'ah scholar."
+    },
+    "verification_basis": {
+      "type": "string",
+      "enum": [
+        "unverified",
+        "corpus_cross_reference",
+        "qualified_scholar_review"
+      ],
+      "description": "How the gold_clause_ids and gold_answer have been verified. corpus_cross_reference is NOT equivalent to qualified_scholar_review — these must never be conflated."
+    },
+    "notes": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Human-authored rationale for inclusion, scope, and anticipated difficulty."
+    }
+  }
+}

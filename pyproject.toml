@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aaoifi-abstention-rag"
+version = "0.0.0"
+description = "Research prototype for abstention-aware, AAOIFI-grounded retrieval-augmented assistance."
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+license = { text = "MIT" }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# src layout, deliberately not installed: the reliability and reporting layers must be
+# importable with no build step and no heavy dependencies. See tests/conftest.py.
+pythonpath = ["src"]
+markers = [
+    "requires_private_data: needs the licensed corpus under data/private/ (Git-ignored); skipped when absent",
+]

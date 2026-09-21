@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(.venv/Scripts/python.exe -m pytest tests/test_metrics.py -q)",
+      "Bash(PYTHONPATH=src .venv/Scripts/python.exe -c ' *)",
+      "Bash(.venv/Scripts/python.exe -c ' *)",
+      "Bash(.venv/Scripts/python.exe -m pytest tests/test_text_checks.py -q)",
+      "Bash(.venv/Scripts/python.exe -m pytest -q)",
+      "Bash(.venv/Scripts/python.exe -m pytest tests/test_response_class.py -q)",
+      "Bash(.venv/Scripts/python.exe -m pytest tests/test_citations.py -q)",
+      "Bash(.venv/Scripts/python.exe -)",
+      "Bash(.venv/Scripts/python.exe -m pytest tests/test_anchoring.py -q)",
+      "Bash(.venv/Scripts/python.exe -m pytest tests/test_evaluation.py -q)",
+      "Bash(PYTHONPATH=src .venv/Scripts/python.exe -)",
+      "Bash(.venv/Scripts/python.exe -m pytest tests/test_pipeline.py -q)",
+      "Bash(.venv/Scripts/python.exe -m pytest tests/test_pipeline.py -m requires_private_data -q)",
+      "Bash(.venv/Scripts/python.exe -m pytest tests/test_grounding.py -q)",
+      "Bash(.venv/Scripts/python.exe -m pytest tests/ -q)",
+      "Bash(.venv/Scripts/python.exe -m pytest tests/test_import_boundaries.py -q)",
+      "Bash(.venv/Scripts/python.exe -m pytest tests/test_import_boundaries.py tests/test_grounding.py -q)",
+      "Bash(.venv/Scripts/python.exe -c \"import sys;sys.path.insert\\(0,'src'\\);from aaoifi_rag.reliability import compute_signals;print\\('ok'\\)\")"
+    ]
+  }
+}

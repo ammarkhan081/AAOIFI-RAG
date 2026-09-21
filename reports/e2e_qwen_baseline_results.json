@@ -1,0 +1,521 @@
+{
+  "experiment": "e2e_batch_smoke",
+  "timestamp": "2026-09-16T08:43:40.789864+00:00",
+  "retrieval": {
+    "type": "fixed_jais2_contexts"
+  },
+  "generation": {
+    "model_id": "Qwen/Qwen2.5-7B-Instruct",
+    "hub_revision": null,
+    "do_sample": false,
+    "max_new_tokens": 512,
+    "seed": 42,
+    "deterministic_algorithms": false
+  },
+  "items": [
+    {
+      "item_id": "H01",
+      "stages": [
+        {
+          "stage": "retrieve",
+          "entered": true,
+          "seconds": 2.4e-05,
+          "detail": "records=5 k=5"
+        },
+        {
+          "stage": "gate_retrieval",
+          "entered": true,
+          "seconds": 7.8e-05,
+          "detail": "decision=answer gate=None"
+        },
+        {
+          "stage": "build_prompt",
+          "entered": true,
+          "seconds": 4.9e-05,
+          "detail": "version=strong_guidance_v5 context_size=5 leak_guard=passed"
+        },
+        {
+          "stage": "generate",
+          "entered": true,
+          "seconds": 18.886549,
+          "detail": "new_tokens=91 truncated=False"
+        },
+        {
+          "stage": "signals",
+          "entered": true,
+          "seconds": 0.002155,
+          "detail": "class=mixed echo=0.2687 citations_passed=True"
+        },
+        {
+          "stage": "route",
+          "entered": true,
+          "seconds": 9.8e-05,
+          "detail": "decision=escalate gate=no_self_contradiction"
+        }
+      ],
+      "top5": [
+        {
+          "chunk_id": "clause:SS8:2/4/4:occurrence:0",
+          "reranker_score": 10.099871635437012
+        },
+        {
+          "chunk_id": "clause:SS8:2/2:occurrence:0",
+          "reranker_score": -0.645780622959137
+        },
+        {
+          "chunk_id": "clause:SS8:4/11:occurrence:0",
+          "reranker_score": -1.83049476146698
+        },
+        {
+          "chunk_id": "clause:SS8:4/3:occurrence:0",
+          "reranker_score": -1.8387892246246338
+        },
+        {
+          "chunk_id": "clause:SS8:2/4/2:occurrence:0",
+          "reranker_score": -2.1368632316589355
+        }
+      ],
+      "decision": "escalate",
+      "served_answer": null,
+      "generation": {
+        "text": "According to [1], if a Murabahah is carried out by means of syndicated financing, the Institution acting as the arranger of the syndicate is entitled to an arrangement fee to be paid by the participants in the syndicate.\n\nRegarding SS8's rules on a commitment fee and a fee for providing a credit facility, there is no direct mention of these terms in the provided excerpts. Therefore, I cannot answer from the given context.",
+        "input_tokens": 771,
+        "new_tokens": 91,
+        "seconds": 18.886,
+        "truncated": false
+      }
+    },
+    {
+      "item_id": "H02",
+      "stages": [
+        {
+          "stage": "retrieve",
+          "entered": true,
+          "seconds": 2e-05,
+          "detail": "records=5 k=5"
+        },
+        {
+          "stage": "gate_retrieval",
+          "entered": true,
+          "seconds": 3.7e-05,
+          "detail": "decision=answer gate=None"
+        },
+        {
+          "stage": "build_prompt",
+          "entered": true,
+          "seconds": 3.2e-05,
+          "detail": "version=strong_guidance_v5 context_size=5 leak_guard=passed"
+        },
+        {
+          "stage": "generate",
+          "entered": true,
+          "seconds": 6.865494,
+          "detail": "new_tokens=8 truncated=False"
+        },
+        {
+          "stage": "signals",
+          "entered": true,
+          "seconds": 0.001485,
+          "detail": "class=abstained echo=0.0000 citations_passed=True"
+        },
+        {
+          "stage": "route",
+          "entered": true,
+          "seconds": 0.000103,
+          "detail": "decision=abstain gate=model_did_not_abstain"
+        }
+      ],
+      "top5": [
+        {
+          "chunk_id": "clause:SS9:8:occurrence:0",
+          "reranker_score": 5.180835723876953
+        },
+        {
+          "chunk_id": "clause:SS9:8/4:occurrence:0",
+          "reranker_score": 3.5716745853424072
+        },
+        {
+          "chunk_id": "clause:SS9:8/1:occurrence:0",
+          "reranker_score": 1.5700669288635254
+        },
+        {
+          "chunk_id": "clause:SS9:8/6:occurrence:0",
+          "reranker_score": 1.5074975490570068
+        },
+        {
+          "chunk_id": "clause:SS9:8/2:occurrence:0",
+          "reranker_score": 1.4932440519332886
+        }
+      ],
+      "decision": "abstain",
+      "served_answer": null,
+      "generation": {
+        "text": "I cannot answer from the given context",
+        "input_tokens": 808,
+        "new_tokens": 8,
+        "seconds": 6.865,
+        "truncated": false
+      }
+    },
+    {
+      "item_id": "H03",
+      "stages": [
+        {
+          "stage": "retrieve",
+          "entered": true,
+          "seconds": 1.4e-05,
+          "detail": "records=5 k=5"
+        },
+        {
+          "stage": "gate_retrieval",
+          "entered": true,
+          "seconds": 4.5e-05,
+          "detail": "decision=answer gate=None"
+        },
+        {
+          "stage": "build_prompt",
+          "entered": true,
+          "seconds": 4.3e-05,
+          "detail": "version=strong_guidance_v5 context_size=5 leak_guard=passed"
+        },
+        {
+          "stage": "generate",
+          "entered": true,
+          "seconds": 13.653406,
+          "detail": "new_tokens=61 truncated=False"
+        },
+        {
+          "stage": "signals",
+          "entered": true,
+          "seconds": 0.003865,
+          "detail": "class=answered echo=0.1765 citations_passed=True"
+        },
+        {
+          "stage": "route",
+          "entered": true,
+          "seconds": 0.000134,
+          "detail": "decision=answer gate=None"
+        }
+      ],
+      "top5": [
+        {
+          "chunk_id": "clause:SS13:6:occurrence:0",
+          "reranker_score": 7.9021100997924805
+        },
+        {
+          "chunk_id": "clause:SS13:9/3:occurrence:0",
+          "reranker_score": 1.3339147567749023
+        },
+        {
+          "chunk_id": "clause:SS13:9/1/6:occurrence:0",
+          "reranker_score": 0.10184035450220108
+        },
+        {
+          "chunk_id": "clause:SS13:9/2:occurrence:0",
+          "reranker_score": 0.09578360617160797
+        },
+        {
+          "chunk_id": "clause:SS13:8/6:occurrence:0",
+          "reranker_score": -0.03859547898173332
+        }
+      ],
+      "decision": "answer",
+      "served_answer": "Under AAOIFI SS13, the capital provider may obtain guarantees from the Mudarib, but these guarantees can only be enforced in cases of misconduct, negligence, or breach of contract on the part of the Mudarib. This is stated in [1] SS13 §6.",
+      "generation": {
+        "text": "Under AAOIFI SS13, the capital provider may obtain guarantees from the Mudarib, but these guarantees can only be enforced in cases of misconduct, negligence, or breach of contract on the part of the Mudarib. This is stated in [1] SS13 §6.",
+        "input_tokens": 932,
+        "new_tokens": 61,
+        "seconds": 13.653,
+        "truncated": false
+      }
+    },
+    {
+      "item_id": "H04",
+      "stages": [
+        {
+          "stage": "retrieve",
+          "entered": true,
+          "seconds": 1.6e-05,
+          "detail": "records=5 k=5"
+        },
+        {
+          "stage": "gate_retrieval",
+          "entered": true,
+          "seconds": 5.9e-05,
+          "detail": "decision=answer gate=None"
+        },
+        {
+          "stage": "build_prompt",
+          "entered": true,
+          "seconds": 4.5e-05,
+          "detail": "version=strong_guidance_v5 context_size=5 leak_guard=passed"
+        },
+        {
+          "stage": "generate",
+          "entered": true,
+          "seconds": 5.530072,
+          "detail": "new_tokens=8 truncated=False"
+        },
+        {
+          "stage": "signals",
+          "entered": true,
+          "seconds": 0.000645,
+          "detail": "class=abstained echo=0.0000 citations_passed=True"
+        },
+        {
+          "stage": "route",
+          "entered": true,
+          "seconds": 7.2e-05,
+          "detail": "decision=abstain gate=model_did_not_abstain"
+        }
+      ],
+      "top5": [
+        {
+          "chunk_id": "clause:SS17:5/2/2:occurrence:0",
+          "reranker_score": 7.276059150695801
+        },
+        {
+          "chunk_id": "clause:SS17:5/1:occurrence:0",
+          "reranker_score": -0.1905767023563385
+        },
+        {
+          "chunk_id": "clause:SS17:4/4:occurrence:0",
+          "reranker_score": -0.2745768129825592
+        },
+        {
+          "chunk_id": "clause:SS17:5/2/4:occurrence:0",
+          "reranker_score": -0.3978884518146515
+        },
+        {
+          "chunk_id": "clause:SS17:5/2/7:occurrence:0",
+          "reranker_score": -0.41766563057899475
+        }
+      ],
+      "decision": "abstain",
+      "served_answer": null,
+      "generation": {
+        "text": "I cannot answer from the given context",
+        "input_tokens": 658,
+        "new_tokens": 8,
+        "seconds": 5.53,
+        "truncated": false
+      }
+    },
+    {
+      "item_id": "H05",
+      "stages": [
+        {
+          "stage": "retrieve",
+          "entered": true,
+          "seconds": 1.6e-05,
+          "detail": "records=5 k=5"
+        },
+        {
+          "stage": "gate_retrieval",
+          "entered": true,
+          "seconds": 3.2e-05,
+          "detail": "decision=answer gate=None"
+        },
+        {
+          "stage": "build_prompt",
+          "entered": true,
+          "seconds": 3.4e-05,
+          "detail": "version=strong_guidance_v5 context_size=5 leak_guard=passed"
+        },
+        {
+          "stage": "generate",
+          "entered": true,
+          "seconds": 16.49476,
+          "detail": "new_tokens=103 truncated=False"
+        },
+        {
+          "stage": "signals",
+          "entered": true,
+          "seconds": 0.004013,
+          "detail": "class=answered echo=0.0448 citations_passed=True"
+        },
+        {
+          "stage": "route",
+          "entered": true,
+          "seconds": 9.9e-05,
+          "detail": "decision=answer gate=None"
+        }
+      ],
+      "top5": [
+        {
+          "chunk_id": "clause:SS26:4/2:occurrence:0",
+          "reranker_score": 4.981423854827881
+        },
+        {
+          "chunk_id": "clause:SS26:3:occurrence:0",
+          "reranker_score": 0.4974699318408966
+        },
+        {
+          "chunk_id": "clause:SS26:10/7:occurrence:0",
+          "reranker_score": -0.5337820053100586
+        },
+        {
+          "chunk_id": "clause:SS26:3/1:occurrence:0",
+          "reranker_score": -1.1992087364196777
+        },
+        {
+          "chunk_id": "clause:SS26:5/3:occurrence:0",
+          "reranker_score": -2.371882438659668
+        }
+      ],
+      "decision": "answer",
+      "served_answer": "According to [1], the relationship between the company and the policyholders’ fund is a Wakalah relationship for management, and a Mudarabah or investment agency relationship for the investment of the fund’s assets.\n\nTreating both management and investment as Mudarabah only, with no Wakalah component, would not match the description provided in [1]. Specifically, [1] states that the relationship includes both a Wakalah aspect for management and a Mudarabah or investment agency aspect for investment.",
+      "generation": {
+        "text": "According to [1], the relationship between the company and the policyholders’ fund is a Wakalah relationship for management, and a Mudarabah or investment agency relationship for the investment of the fund’s assets.\n\nTreating both management and investment as Mudarabah only, with no Wakalah component, would not match the description provided in [1]. Specifically, [1] states that the relationship includes both a Wakalah aspect for management and a Mudarabah or investment agency aspect for investment.",
+        "input_tokens": 771,
+        "new_tokens": 103,
+        "seconds": 16.495,
+        "truncated": false
+      }
+    },
+    {
+      "item_id": "H06",
+      "stages": [
+        {
+          "stage": "retrieve",
+          "entered": true,
+          "seconds": 1.3e-05,
+          "detail": "records=5 k=5"
+        },
+        {
+          "stage": "gate_retrieval",
+          "entered": true,
+          "seconds": 3.2e-05,
+          "detail": "decision=answer gate=None"
+        },
+        {
+          "stage": "build_prompt",
+          "entered": true,
+          "seconds": 3.9e-05,
+          "detail": "version=strong_guidance_v5 context_size=5 leak_guard=passed"
+        },
+        {
+          "stage": "generate",
+          "entered": true,
+          "seconds": 6.979589,
+          "detail": "new_tokens=8 truncated=False"
+        },
+        {
+          "stage": "signals",
+          "entered": true,
+          "seconds": 0.001048,
+          "detail": "class=abstained echo=0.0000 citations_passed=True"
+        },
+        {
+          "stage": "route",
+          "entered": true,
+          "seconds": 6.8e-05,
+          "detail": "decision=abstain gate=model_did_not_abstain"
+        }
+      ],
+      "top5": [
+        {
+          "chunk_id": "clause:SS8:5/6:occurrence:0",
+          "reranker_score": 7.337094783782959
+        },
+        {
+          "chunk_id": "clause:SS9:2/4:occurrence:0",
+          "reranker_score": 0.6312291622161865
+        },
+        {
+          "chunk_id": "clause:SS8:5/2:occurrence:0",
+          "reranker_score": -0.2123161405324936
+        },
+        {
+          "chunk_id": "clause:SS8:4/11:occurrence:0",
+          "reranker_score": -0.27424752712249756
+        },
+        {
+          "chunk_id": "clause:SS8:5/1:occurrence:0",
+          "reranker_score": -0.3942772150039673
+        }
+      ],
+      "decision": "abstain",
+      "served_answer": null,
+      "generation": {
+        "text": "I cannot answer from the given context",
+        "input_tokens": 920,
+        "new_tokens": 8,
+        "seconds": 6.979,
+        "truncated": false
+      }
+    },
+    {
+      "item_id": "H07",
+      "stages": [
+        {
+          "stage": "retrieve",
+          "entered": true,
+          "seconds": 2.1e-05,
+          "detail": "records=5 k=5"
+        },
+        {
+          "stage": "gate_retrieval",
+          "entered": true,
+          "seconds": 3.7e-05,
+          "detail": "decision=answer gate=None"
+        },
+        {
+          "stage": "build_prompt",
+          "entered": true,
+          "seconds": 3.7e-05,
+          "detail": "version=strong_guidance_v5 context_size=5 leak_guard=passed"
+        },
+        {
+          "stage": "generate",
+          "entered": true,
+          "seconds": 6.526864,
+          "detail": "new_tokens=8 truncated=False"
+        },
+        {
+          "stage": "signals",
+          "entered": true,
+          "seconds": 0.000992,
+          "detail": "class=abstained echo=0.0000 citations_passed=True"
+        },
+        {
+          "stage": "route",
+          "entered": true,
+          "seconds": 8.3e-05,
+          "detail": "decision=abstain gate=model_did_not_abstain"
+        }
+      ],
+      "top5": [
+        {
+          "chunk_id": "clause:SS9:3/2:occurrence:0",
+          "reranker_score": 3.780673027038574
+        },
+        {
+          "chunk_id": "clause:SS9:8/5:occurrence:0",
+          "reranker_score": 3.5129387378692627
+        },
+        {
+          "chunk_id": "clause:SS9:8:occurrence:0",
+          "reranker_score": 2.1316840648651123
+        },
+        {
+          "chunk_id": "clause:SS9:8/6:occurrence:0",
+          "reranker_score": 1.28572416305542
+        },
+        {
+          "chunk_id": "clause:SS9:3/6:occurrence:0",
+          "reranker_score": 1.2004220485687256
+        }
+      ],
+      "decision": "abstain",
+      "served_answer": null,
+      "generation": {
+        "text": "I cannot answer from the given context",
+        "input_tokens": 847,
+        "new_tokens": 8,
+        "seconds": 6.527,
+        "truncated": false
+      }
+    }
+  ]
+}

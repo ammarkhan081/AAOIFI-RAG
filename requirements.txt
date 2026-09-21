@@ -1,0 +1,31 @@
+# Phase 1-2 environment specification only. No packages have been installed by this setup.
+# Python: >=3.10,<3.13 (the local virtual environment uses Python 3.12).
+
+# Retrieval: lexical BM25; this package is functional but its latest PyPI release is old.
+rank-bm25==0.2.2
+
+# Layout-aware PDF extraction with character-coordinate access and visual-debug support.
+pdfplumber==0.11.10
+
+# Deterministic BPE tokenizer for the fixed-token baseline. This is not the future Jais tokenizer.
+tiktoken==0.14.0
+
+# BGE-M3 and BGE-reranker-v2-m3 inference library.
+# Model identifiers are not PyPI packages and must not be downloaded without an
+# approved runtime. The direct reranker implementation uses transformers below.
+FlagEmbedding==1.4.0
+transformers>=4.44.2,<6.0.0
+
+# Prototype vector store.
+chromadb==1.5.9
+
+# Loads .env into os.environ at process start. huggingface_hub reads HUGGINGFACE_HUB_TOKEN
+# directly from os.environ — dotenv is the bridge that makes the .env file visible to it
+# in local dev without any code changes between local and Colab (where the token is set
+# as a Colab Secret and already in the environment without dotenv).
+python-dotenv>=1.0.0,<2.0.0
+
+# Deliberately unpinned: choose the CPU/CUDA-specific PyTorch wheel only after GPU/OS availability is confirmed.
+# Do not add or download BAAI/bge-m3, BAAI/bge-reranker-v2-m3, or an LLM in Phase 1.
+# The project will use a plain explicit Python state machine; LangGraph is intentionally excluded.
+# LM-Polygraph and Ragas are deferred until their respective Phase 3 and Phase 4 work.

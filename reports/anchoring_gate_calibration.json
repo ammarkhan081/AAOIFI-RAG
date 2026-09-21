@@ -1,0 +1,2490 @@
+{
+  "source": "scripts/calibrate_anchoring_gate.py",
+  "top_k": 5,
+  "thresholds": [
+    0.1,
+    0.2,
+    0.25,
+    0.3,
+    0.34,
+    0.4,
+    0.5,
+    0.6,
+    0.67,
+    0.75
+  ],
+  "circular_bases": [
+    "term_absent_from_corpus"
+  ],
+  "non_circular_bases": [
+    "standard_absent_from_corpus",
+    "clause_absent_from_standard"
+  ],
+  "variants": [
+    {
+      "spec": {
+        "min_idf": 2.0,
+        "min_term_length": 4,
+        "fold_suffixes": true,
+        "keep_slash_numerals": true,
+        "drop_frame_terms": true,
+        "context_metadata_keys": [
+          "standard_id",
+          "clause_id",
+          "sub_clause_id",
+          "chunk_id"
+        ],
+        "spec_version": "anchor_spec_v1"
+      },
+      "vocabulary": {
+        "n_documents": 362,
+        "n_terms": 1491
+      },
+      "bm25": [
+        {
+          "id": "H01",
+          "group": "answerable_n7",
+          "coverage": 0.876649737695746,
+          "unweighted_coverage": 0.8888888888888888,
+          "oov_ratio": 0.05555555555555555,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 18,
+          "n_uncovered": 2,
+          "n_oov": 1,
+          "terms_withheld": "hard-set question text is Git-ignored"
+        },
+        {
+          "id": "H02",
+          "group": "answerable_n7",
+          "coverage": 0.4236024110923799,
+          "unweighted_coverage": 0.5,
+          "oov_ratio": 0.07142857142857142,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 14,
+          "n_uncovered": 7,
+          "n_oov": 1,
+          "terms_withheld": "hard-set question text is Git-ignored"
+        },
+        {
+          "id": "H03",
+          "group": "answerable_n7",
+          "coverage": 0.8009984666326915,
+          "unweighted_coverage": 0.875,
+          "oov_ratio": 0.25,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 8,
+          "n_uncovered": 1,
+          "n_oov": 2,
+          "terms_withheld": "hard-set question text is Git-ignored"
+        },
+        {
+          "id": "H04",
+          "group": "answerable_n7",
+          "coverage": 1.0,
+          "unweighted_coverage": 1.0,
+          "oov_ratio": 0.1,
+          "max_uncovered_idf": null,
+          "n_anchors": 10,
+          "n_uncovered": 0,
+          "n_oov": 1,
+          "terms_withheld": "hard-set question text is Git-ignored"
+        },
+        {
+          "id": "H05",
+          "group": "answerable_n7",
+          "coverage": 0.6149352947771919,
+          "unweighted_coverage": 0.6923076923076923,
+          "oov_ratio": 0.23076923076923078,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 13,
+          "n_uncovered": 4,
+          "n_oov": 3,
+          "terms_withheld": "hard-set question text is Git-ignored"
+        },
+        {
+          "id": "H06",
+          "group": "answerable_n7",
+          "coverage": 0.8366611071652315,
+          "unweighted_coverage": 0.8666666666666667,
+          "oov_ratio": 0.0,
+          "max_uncovered_idf": 4.7930319231576615,
+          "n_anchors": 15,
+          "n_uncovered": 2,
+          "n_oov": 0,
+          "terms_withheld": "hard-set question text is Git-ignored"
+        },
+        {
+          "id": "H07",
+          "group": "answerable_n7",
+          "coverage": 0.26649027021984406,
+          "unweighted_coverage": 0.375,
+          "oov_ratio": 0.3125,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 16,
+          "n_uncovered": 10,
+          "n_oov": 5,
+          "terms_withheld": "hard-set question text is Git-ignored"
+        },
+        {
+          "id": "U-TERM-01",
+          "group": "term_absent_from_corpus",
+          "coverage": 0.42856985595602204,
+          "unweighted_coverage": 0.5,
+          "oov_ratio": 0.25,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 4,
+          "anchors": [
+            "zakat",
+            "calculat",
+            "held",
+            "framework"
+          ],
+          "uncovered": [
+            "zakat",
+            "calculat"
+          ],
+          "oov": [
+            "zakat"
+          ]
+        },
+        {
+          "id": "U-TERM-02",
+          "group": "term_absent_from_corpus",
+          "coverage": 0.38914759173186103,
+          "unweighted_coverage": 0.5,
+          "oov_ratio": 0.5,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 4,
+          "anchors": [
+            "requirement",
+            "establish",
+            "waqf",
+            "endowment"
+          ],
+          "uncovered": [
+            "waqf",
+            "endowment"
+          ],
+          "oov": [
+            "waqf",
+            "endowment"
+          ]
+        },
+        {
+          "id": "U-TERM-03",
+          "group": "term_absent_from_corpus",
+          "coverage": 0.23421419086834333,
+          "unweighted_coverage": 0.3333333333333333,
+          "oov_ratio": 0.5,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 6,
+          "anchors": [
+            "organis",
+            "tawarruq",
+            "permitt",
+            "liquidity",
+            "management",
+            "instrument"
+          ],
+          "uncovered": [
+            "organis",
+            "tawarruq",
+            "liquidity",
+            "instrument"
+          ],
+          "oov": [
+            "organis",
+            "tawarruq",
+            "liquidity"
+          ]
+        },
+        {
+          "id": "U-TERM-04",
+          "group": "term_absent_from_corpus",
+          "coverage": 0.630980560624348,
+          "unweighted_coverage": 0.75,
+          "oov_ratio": 0.25,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 4,
+          "anchors": [
+            "cryptocurrency",
+            "used",
+            "subject",
+            "matter"
+          ],
+          "uncovered": [
+            "cryptocurrency"
+          ],
+          "oov": [
+            "cryptocurrency"
+          ]
+        },
+        {
+          "id": "U-TERM-05",
+          "group": "term_absent_from_corpus",
+          "coverage": 0.16896105920848392,
+          "unweighted_coverage": 0.2,
+          "oov_ratio": 0.4,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 5,
+          "anchors": [
+            "control",
+            "apply",
+            "record",
+            "maintain",
+            "blockchain"
+          ],
+          "uncovered": [
+            "control",
+            "record",
+            "maintain",
+            "blockchain"
+          ],
+          "oov": [
+            "record",
+            "blockchain"
+          ]
+        },
+        {
+          "id": "U-TERM-06",
+          "group": "term_absent_from_corpus",
+          "coverage": 0.3674016950622006,
+          "unweighted_coverage": 0.5,
+          "oov_ratio": 0.25,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 4,
+          "anchors": [
+            "deferr",
+            "recognis",
+            "measur",
+            "transaction"
+          ],
+          "uncovered": [
+            "recognis",
+            "measur"
+          ],
+          "oov": [
+            "recognis"
+          ]
+        },
+        {
+          "id": "U-TERM-07",
+          "group": "term_absent_from_corpus",
+          "coverage": 0.29368056675291826,
+          "unweighted_coverage": 0.4,
+          "oov_ratio": 0.4,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 5,
+          "anchors": [
+            "capital",
+            "adequacy",
+            "ratio",
+            "maintain",
+            "exposure"
+          ],
+          "uncovered": [
+            "adequacy",
+            "ratio",
+            "exposure"
+          ],
+          "oov": [
+            "adequacy",
+            "exposure"
+          ]
+        },
+        {
+          "id": "U-TERM-08",
+          "group": "term_absent_from_corpus",
+          "coverage": 0.5465455041868011,
+          "unweighted_coverage": 0.6666666666666666,
+          "oov_ratio": 0.3333333333333333,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 3,
+          "anchors": [
+            "disclosur",
+            "requir",
+            "conclud"
+          ],
+          "uncovered": [
+            "disclosur"
+          ],
+          "oov": [
+            "disclosur"
+          ]
+        },
+        {
+          "id": "U-STD-01",
+          "group": "standard_absent_from_corpus",
+          "coverage": 1.0,
+          "unweighted_coverage": 1.0,
+          "oov_ratio": 0.0,
+          "max_uncovered_idf": null,
+          "n_anchors": 4,
+          "anchors": [
+            "shari'ah",
+            "standard",
+            "require",
+            "sign"
+          ],
+          "uncovered": [],
+          "oov": []
+        },
+        {
+          "id": "U-STD-02",
+          "group": "standard_absent_from_corpus",
+          "coverage": 0.41063952872945914,
+          "unweighted_coverage": 0.5,
+          "oov_ratio": 0.0,
+          "max_uncovered_idf": 5.198497031265826,
+          "n_anchors": 4,
+          "anchors": [
+            "permissibility",
+            "condition",
+            "shari'ah",
+            "standard"
+          ],
+          "uncovered": [
+            "permissibility",
+            "condition"
+          ],
+          "oov": []
+        },
+        {
+          "id": "U-STD-03",
+          "group": "standard_absent_from_corpus",
+          "coverage": 0.42783801460296855,
+          "unweighted_coverage": 0.6,
+          "oov_ratio": 0.4,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 5,
+          "anchors": [
+            "shari'ah",
+            "standard",
+            "disclosur",
+            "make",
+            "client"
+          ],
+          "uncovered": [
+            "disclosur",
+            "client"
+          ],
+          "oov": [
+            "disclosur",
+            "client"
+          ]
+        },
+        {
+          "id": "U-STD-04",
+          "group": "standard_absent_from_corpus",
+          "coverage": 0.4728077645761768,
+          "unweighted_coverage": 0.5,
+          "oov_ratio": 0.16666666666666666,
+          "max_uncovered_idf": 4.7930319231576615,
+          "n_anchors": 6,
+          "anchors": [
+            "clause",
+            "shari'ah",
+            "standard",
+            "govern",
+            "early",
+            "termination"
+          ],
+          "uncovered": [
+            "govern",
+            "early",
+            "termination"
+          ],
+          "oov": [
+            "clause"
+          ]
+        },
+        {
+          "id": "U-STD-05",
+          "group": "standard_absent_from_corpus",
+          "coverage": 0.760170469476164,
+          "unweighted_coverage": 0.75,
+          "oov_ratio": 0.25,
+          "max_uncovered_idf": 3.5890591188317256,
+          "n_anchors": 4,
+          "anchors": [
+            "clause",
+            "shari'ah",
+            "standard",
+            "provide"
+          ],
+          "uncovered": [
+            "provide"
+          ],
+          "oov": [
+            "clause"
+          ]
+        },
+        {
+          "id": "U-STD-06",
+          "group": "standard_absent_from_corpus",
+          "coverage": 0.31549664296790747,
+          "unweighted_coverage": 0.42857142857142855,
+          "oov_ratio": 0.2857142857142857,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 7,
+          "anchors": [
+            "shari'ah",
+            "standard",
+            "permit",
+            "arrangement",
+            "describ",
+            "preced",
+            "paragraph"
+          ],
+          "uncovered": [
+            "permit",
+            "arrangement",
+            "preced",
+            "paragraph"
+          ],
+          "oov": [
+            "preced",
+            "paragraph"
+          ]
+        },
+        {
+          "id": "U-CLAUSE-01",
+          "group": "clause_absent_from_standard",
+          "coverage": 0.6983373153889889,
+          "unweighted_coverage": 0.75,
+          "oov_ratio": 0.25,
+          "max_uncovered_idf": 4.7930319231576615,
+          "n_anchors": 4,
+          "anchors": [
+            "clause",
+            "murabahah",
+            "standard",
+            "require"
+          ],
+          "uncovered": [
+            "require"
+          ],
+          "oov": [
+            "clause"
+          ]
+        },
+        {
+          "id": "U-CLAUSE-02",
+          "group": "clause_absent_from_standard",
+          "coverage": 1.0,
+          "unweighted_coverage": 1.0,
+          "oov_ratio": 0.25,
+          "max_uncovered_idf": null,
+          "n_anchors": 4,
+          "anchors": [
+            "clause",
+            "muntahia",
+            "bittamleek",
+            "standard"
+          ],
+          "uncovered": [],
+          "oov": [
+            "clause"
+          ]
+        },
+        {
+          "id": "U-CLAUSE-03",
+          "group": "clause_absent_from_standard",
+          "coverage": 0.6709243489695039,
+          "unweighted_coverage": 0.75,
+          "oov_ratio": 0.5,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 4,
+          "anchors": [
+            "clause",
+            "standard",
+            "loss",
+            "allocat"
+          ],
+          "uncovered": [
+            "allocat"
+          ],
+          "oov": [
+            "clause",
+            "allocat"
+          ]
+        },
+        {
+          "id": "U-CLAUSE-04",
+          "group": "clause_absent_from_standard",
+          "coverage": 0.6834894158782173,
+          "unweighted_coverage": 0.7142857142857143,
+          "oov_ratio": 0.14285714285714285,
+          "max_uncovered_idf": 4.7930319231576615,
+          "n_anchors": 7,
+          "anchors": [
+            "condition",
+            "clause",
+            "investment",
+            "sukuk",
+            "standard",
+            "impose",
+            "issuer"
+          ],
+          "uncovered": [
+            "impose",
+            "issuer"
+          ],
+          "oov": [
+            "clause"
+          ]
+        },
+        {
+          "id": "U-CLAUSE-05",
+          "group": "clause_absent_from_standard",
+          "coverage": 1.0,
+          "unweighted_coverage": 1.0,
+          "oov_ratio": 0.2,
+          "max_uncovered_idf": null,
+          "n_anchors": 5,
+          "anchors": [
+            "clause",
+            "islamic",
+            "standard",
+            "surplu",
+            "distribution"
+          ],
+          "uncovered": [],
+          "oov": [
+            "clause"
+          ]
+        },
+        {
+          "id": "E-CROSS-01",
+          "group": "cross_standard_comparison",
+          "coverage": 0.2974430275099358,
+          "unweighted_coverage": 0.42857142857142855,
+          "oov_ratio": 0.14285714285714285,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 7,
+          "anchors": [
+            "murabahah",
+            "standard",
+            "treat",
+            "institution'",
+            "ownership",
+            "pass",
+            "client"
+          ],
+          "uncovered": [
+            "treat",
+            "institution'",
+            "pass",
+            "client"
+          ],
+          "oov": [
+            "client"
+          ]
+        },
+        {
+          "id": "E-CROSS-02",
+          "group": "cross_standard_comparison",
+          "coverage": 0.37180917911667827,
+          "unweighted_coverage": 0.5,
+          "oov_ratio": 0.25,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 8,
+          "anchors": [
+            "based",
+            "sukuk",
+            "structur",
+            "standard'",
+            "requirement",
+            "leas",
+            "investment",
+            "underly"
+          ],
+          "uncovered": [
+            "based",
+            "structur",
+            "standard'",
+            "requirement"
+          ],
+          "oov": [
+            "structur",
+            "standard'"
+          ]
+        },
+        {
+          "id": "E-CROSS-03",
+          "group": "cross_standard_comparison",
+          "coverage": 0.5178280174385748,
+          "unweighted_coverage": 0.6923076923076923,
+          "oov_ratio": 0.23076923076923078,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 13,
+          "anchors": [
+            "sukuk",
+            "issue",
+            "structur",
+            "basi",
+            "standard'",
+            "profit",
+            "shar",
+            "rule",
+            "interact",
+            "investment",
+            "return",
+            "certificate",
+            "holder"
+          ],
+          "uncovered": [
+            "structur",
+            "standard'",
+            "interact",
+            "return"
+          ],
+          "oov": [
+            "structur",
+            "standard'",
+            "interact"
+          ]
+        },
+        {
+          "id": "E-CROSS-04",
+          "group": "cross_standard_comparison",
+          "coverage": 0.31354490068156,
+          "unweighted_coverage": 0.375,
+          "oov_ratio": 0.25,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 8,
+          "anchors": [
+            "appropriate",
+            "financ",
+            "work",
+            "capital",
+            "standard",
+            "index",
+            "murabahah",
+            "ground"
+          ],
+          "uncovered": [
+            "financ",
+            "work",
+            "index",
+            "murabahah",
+            "ground"
+          ],
+          "oov": [
+            "index",
+            "ground"
+          ]
+        },
+        {
+          "id": "E-CROSS-05",
+          "group": "cross_standard_comparison",
+          "coverage": 0.8502558415780409,
+          "unweighted_coverage": 0.8888888888888888,
+          "oov_ratio": 0.0,
+          "max_uncovered_idf": 4.099884742597716,
+          "n_anchors": 9,
+          "anchors": [
+            "islamic",
+            "fund",
+            "invest",
+            "reserv",
+            "investment",
+            "sukuk",
+            "condition",
+            "standard",
+            "apply"
+          ],
+          "uncovered": [
+            "apply"
+          ],
+          "oov": []
+        },
+        {
+          "id": "E-CROSS-06",
+          "group": "cross_standard_comparison",
+          "coverage": 0.3683652284409236,
+          "unweighted_coverage": 0.5,
+          "oov_ratio": 0.35714285714285715,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 14,
+          "anchors": [
+            "islamic",
+            "operator",
+            "want",
+            "lease",
+            "head",
+            "office",
+            "invest",
+            "policyholder",
+            "surplu",
+            "provision",
+            "acros",
+            "relevant",
+            "standard",
+            "constrain"
+          ],
+          "uncovered": [
+            "operator",
+            "want",
+            "head",
+            "office",
+            "acros",
+            "relevant",
+            "constrain"
+          ],
+          "oov": [
+            "operator",
+            "want",
+            "head",
+            "office",
+            "acros"
+          ]
+        }
+      ],
+      "stored_hybrid_rerank": [
+        {
+          "id": "H01",
+          "group": "answerable_n7",
+          "coverage": 0.8302555433554403,
+          "unweighted_coverage": 0.8333333333333334,
+          "oov_ratio": 0.05555555555555555,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 18,
+          "n_uncovered": 3,
+          "n_oov": 1,
+          "terms_withheld": "hard-set question text is Git-ignored"
+        },
+        {
+          "id": "H02",
+          "group": "answerable_n7",
+          "coverage": 0.5403445310047471,
+          "unweighted_coverage": 0.5714285714285714,
+          "oov_ratio": 0.07142857142857142,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 14,
+          "n_uncovered": 6,
+          "n_oov": 1,
+          "terms_withheld": "hard-set question text is Git-ignored"
+        },
+        {
+          "id": "H03",
+          "group": "answerable_n7",
+          "coverage": 0.8009984666326915,
+          "unweighted_coverage": 0.875,
+          "oov_ratio": 0.25,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 8,
+          "n_uncovered": 1,
+          "n_oov": 2,
+          "terms_withheld": "hard-set question text is Git-ignored"
+        },
+        {
+          "id": "H04",
+          "group": "answerable_n7",
+          "coverage": 1.0,
+          "unweighted_coverage": 1.0,
+          "oov_ratio": 0.1,
+          "max_uncovered_idf": null,
+          "n_anchors": 10,
+          "n_uncovered": 0,
+          "n_oov": 1,
+          "terms_withheld": "hard-set question text is Git-ignored"
+        },
+        {
+          "id": "H05",
+          "group": "answerable_n7",
+          "coverage": 0.6149352947771919,
+          "unweighted_coverage": 0.6923076923076923,
+          "oov_ratio": 0.23076923076923078,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 13,
+          "n_uncovered": 4,
+          "n_oov": 3,
+          "terms_withheld": "hard-set question text is Git-ignored"
+        },
+        {
+          "id": "H06",
+          "group": "answerable_n7",
+          "coverage": 0.8366611071652315,
+          "unweighted_coverage": 0.8666666666666667,
+          "oov_ratio": 0.0,
+          "max_uncovered_idf": 4.7930319231576615,
+          "n_anchors": 15,
+          "n_uncovered": 2,
+          "n_oov": 0,
+          "terms_withheld": "hard-set question text is Git-ignored"
+        },
+        {
+          "id": "H07",
+          "group": "answerable_n7",
+          "coverage": 0.2952155022671029,
+          "unweighted_coverage": 0.375,
+          "oov_ratio": 0.3125,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 16,
+          "n_uncovered": 10,
+          "n_oov": 5,
+          "terms_withheld": "hard-set question text is Git-ignored"
+        }
+      ]
+    },
+    {
+      "spec": {
+        "min_idf": 2.0,
+        "min_term_length": 4,
+        "fold_suffixes": true,
+        "keep_slash_numerals": true,
+        "drop_frame_terms": false,
+        "context_metadata_keys": [
+          "standard_id",
+          "clause_id",
+          "sub_clause_id",
+          "chunk_id"
+        ],
+        "spec_version": "anchor_spec_v1"
+      },
+      "vocabulary": {
+        "n_documents": 362,
+        "n_terms": 1491
+      },
+      "bm25": [
+        {
+          "id": "H01",
+          "group": "answerable_n7",
+          "coverage": 0.8086897657742694,
+          "unweighted_coverage": 0.8421052631578947,
+          "oov_ratio": 0.10526315789473684,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 19,
+          "n_uncovered": 3,
+          "n_oov": 2,
+          "terms_withheld": "hard-set question text is Git-ignored"
+        },
+        {
+          "id": "H02",
+          "group": "answerable_n7",
+          "coverage": 0.4236024110923799,
+          "unweighted_coverage": 0.5,
+          "oov_ratio": 0.07142857142857142,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 14,
+          "n_uncovered": 7,
+          "n_oov": 1,
+          "terms_withheld": "hard-set question text is Git-ignored"
+        },
+        {
+          "id": "H03",
+          "group": "answerable_n7",
+          "coverage": 0.6680545807002812,
+          "unweighted_coverage": 0.7777777777777778,
+          "oov_ratio": 0.3333333333333333,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 9,
+          "n_uncovered": 2,
+          "n_oov": 3,
+          "terms_withheld": "hard-set question text is Git-ignored"
+        },
+        {
+          "id": "H04",
+          "group": "answerable_n7",
+          "coverage": 0.8588722408907564,
+          "unweighted_coverage": 0.9090909090909091,
+          "oov_ratio": 0.18181818181818182,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 11,
+          "n_uncovered": 1,
+          "n_oov": 2,
+          "terms_withheld": "hard-set question text is Git-ignored"
+        },
+        {
+          "id": "H05",
+          "group": "answerable_n7",
+          "coverage": 0.5538533457083479,
+          "unweighted_coverage": 0.6428571428571429,
+          "oov_ratio": 0.2857142857142857,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 14,
+          "n_uncovered": 5,
+          "n_oov": 4,
+          "terms_withheld": "hard-set question text is Git-ignored"
+        },
+        {
+          "id": "H06",
+          "group": "answerable_n7",
+          "coverage": 0.7536655793046888,
+          "unweighted_coverage": 0.8125,
+          "oov_ratio": 0.0625,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 16,
+          "n_uncovered": 3,
+          "n_oov": 1,
+          "terms_withheld": "hard-set question text is Git-ignored"
+        },
+        {
+          "id": "H07",
+          "group": "answerable_n7",
+          "coverage": 0.26649027021984406,
+          "unweighted_coverage": 0.375,
+          "oov_ratio": 0.3125,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 16,
+          "n_uncovered": 10,
+          "n_oov": 5,
+          "terms_withheld": "hard-set question text is Git-ignored"
+        },
+        {
+          "id": "U-TERM-01",
+          "group": "term_absent_from_corpus",
+          "coverage": 0.42856985595602204,
+          "unweighted_coverage": 0.5,
+          "oov_ratio": 0.25,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 4,
+          "anchors": [
+            "zakat",
+            "calculat",
+            "held",
+            "framework"
+          ],
+          "uncovered": [
+            "zakat",
+            "calculat"
+          ],
+          "oov": [
+            "zakat"
+          ]
+        },
+        {
+          "id": "U-TERM-02",
+          "group": "term_absent_from_corpus",
+          "coverage": 0.38914759173186103,
+          "unweighted_coverage": 0.5,
+          "oov_ratio": 0.5,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 4,
+          "anchors": [
+            "requirement",
+            "establish",
+            "waqf",
+            "endowment"
+          ],
+          "uncovered": [
+            "waqf",
+            "endowment"
+          ],
+          "oov": [
+            "waqf",
+            "endowment"
+          ]
+        },
+        {
+          "id": "U-TERM-03",
+          "group": "term_absent_from_corpus",
+          "coverage": 0.23421419086834333,
+          "unweighted_coverage": 0.3333333333333333,
+          "oov_ratio": 0.5,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 6,
+          "anchors": [
+            "organis",
+            "tawarruq",
+            "permitt",
+            "liquidity",
+            "management",
+            "instrument"
+          ],
+          "uncovered": [
+            "organis",
+            "tawarruq",
+            "liquidity",
+            "instrument"
+          ],
+          "oov": [
+            "organis",
+            "tawarruq",
+            "liquidity"
+          ]
+        },
+        {
+          "id": "U-TERM-04",
+          "group": "term_absent_from_corpus",
+          "coverage": 0.630980560624348,
+          "unweighted_coverage": 0.75,
+          "oov_ratio": 0.25,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 4,
+          "anchors": [
+            "cryptocurrency",
+            "used",
+            "subject",
+            "matter"
+          ],
+          "uncovered": [
+            "cryptocurrency"
+          ],
+          "oov": [
+            "cryptocurrency"
+          ]
+        },
+        {
+          "id": "U-TERM-05",
+          "group": "term_absent_from_corpus",
+          "coverage": 0.16896105920848392,
+          "unweighted_coverage": 0.2,
+          "oov_ratio": 0.4,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 5,
+          "anchors": [
+            "control",
+            "apply",
+            "record",
+            "maintain",
+            "blockchain"
+          ],
+          "uncovered": [
+            "control",
+            "record",
+            "maintain",
+            "blockchain"
+          ],
+          "oov": [
+            "record",
+            "blockchain"
+          ]
+        },
+        {
+          "id": "U-TERM-06",
+          "group": "term_absent_from_corpus",
+          "coverage": 0.3674016950622006,
+          "unweighted_coverage": 0.5,
+          "oov_ratio": 0.25,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 4,
+          "anchors": [
+            "deferr",
+            "recognis",
+            "measur",
+            "transaction"
+          ],
+          "uncovered": [
+            "recognis",
+            "measur"
+          ],
+          "oov": [
+            "recognis"
+          ]
+        },
+        {
+          "id": "U-TERM-07",
+          "group": "term_absent_from_corpus",
+          "coverage": 0.29368056675291826,
+          "unweighted_coverage": 0.4,
+          "oov_ratio": 0.4,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 5,
+          "anchors": [
+            "capital",
+            "adequacy",
+            "ratio",
+            "maintain",
+            "exposure"
+          ],
+          "uncovered": [
+            "adequacy",
+            "ratio",
+            "exposure"
+          ],
+          "oov": [
+            "adequacy",
+            "exposure"
+          ]
+        },
+        {
+          "id": "U-TERM-08",
+          "group": "term_absent_from_corpus",
+          "coverage": 0.5465455041868011,
+          "unweighted_coverage": 0.6666666666666666,
+          "oov_ratio": 0.3333333333333333,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 3,
+          "anchors": [
+            "disclosur",
+            "requir",
+            "conclud"
+          ],
+          "uncovered": [
+            "disclosur"
+          ],
+          "oov": [
+            "disclosur"
+          ]
+        },
+        {
+          "id": "U-STD-01",
+          "group": "standard_absent_from_corpus",
+          "coverage": 0.7018108099290297,
+          "unweighted_coverage": 0.8,
+          "oov_ratio": 0.2,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 5,
+          "anchors": [
+            "aaoifi",
+            "shari'ah",
+            "standard",
+            "require",
+            "sign"
+          ],
+          "uncovered": [
+            "aaoifi"
+          ],
+          "oov": [
+            "aaoifi"
+          ]
+        },
+        {
+          "id": "U-STD-02",
+          "group": "standard_absent_from_corpus",
+          "coverage": 0.2181615225746976,
+          "unweighted_coverage": 0.3333333333333333,
+          "oov_ratio": 0.3333333333333333,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 6,
+          "anchors": [
+            "summarise",
+            "permissibility",
+            "condition",
+            "aaoifi",
+            "shari'ah",
+            "standard"
+          ],
+          "uncovered": [
+            "summarise",
+            "permissibility",
+            "condition",
+            "aaoifi"
+          ],
+          "oov": [
+            "summarise",
+            "aaoifi"
+          ]
+        },
+        {
+          "id": "U-STD-03",
+          "group": "standard_absent_from_corpus",
+          "coverage": 0.3326680178246462,
+          "unweighted_coverage": 0.5,
+          "oov_ratio": 0.5,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 6,
+          "anchors": [
+            "aaoifi",
+            "shari'ah",
+            "standard",
+            "disclosur",
+            "make",
+            "client"
+          ],
+          "uncovered": [
+            "aaoifi",
+            "disclosur",
+            "client"
+          ],
+          "oov": [
+            "aaoifi",
+            "disclosur",
+            "client"
+          ]
+        },
+        {
+          "id": "U-STD-04",
+          "group": "standard_absent_from_corpus",
+          "coverage": 0.37980551905620075,
+          "unweighted_coverage": 0.42857142857142855,
+          "oov_ratio": 0.2857142857142857,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 7,
+          "anchors": [
+            "clause",
+            "aaoifi",
+            "shari'ah",
+            "standard",
+            "govern",
+            "early",
+            "termination"
+          ],
+          "uncovered": [
+            "aaoifi",
+            "govern",
+            "early",
+            "termination"
+          ],
+          "oov": [
+            "clause",
+            "aaoifi"
+          ]
+        },
+        {
+          "id": "U-STD-05",
+          "group": "standard_absent_from_corpus",
+          "coverage": 0.5454357895737095,
+          "unweighted_coverage": 0.6,
+          "oov_ratio": 0.4,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 5,
+          "anchors": [
+            "clause",
+            "aaoifi",
+            "shari'ah",
+            "standard",
+            "provide"
+          ],
+          "uncovered": [
+            "aaoifi",
+            "provide"
+          ],
+          "oov": [
+            "clause",
+            "aaoifi"
+          ]
+        },
+        {
+          "id": "U-STD-06",
+          "group": "standard_absent_from_corpus",
+          "coverage": 0.26424764001465284,
+          "unweighted_coverage": 0.375,
+          "oov_ratio": 0.375,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 8,
+          "anchors": [
+            "aaoifi",
+            "shari'ah",
+            "standard",
+            "permit",
+            "arrangement",
+            "describ",
+            "preced",
+            "paragraph"
+          ],
+          "uncovered": [
+            "aaoifi",
+            "permit",
+            "arrangement",
+            "preced",
+            "paragraph"
+          ],
+          "oov": [
+            "aaoifi",
+            "preced",
+            "paragraph"
+          ]
+        },
+        {
+          "id": "U-CLAUSE-01",
+          "group": "clause_absent_from_standard",
+          "coverage": 0.6983373153889889,
+          "unweighted_coverage": 0.75,
+          "oov_ratio": 0.25,
+          "max_uncovered_idf": 4.7930319231576615,
+          "n_anchors": 4,
+          "anchors": [
+            "clause",
+            "murabahah",
+            "standard",
+            "require"
+          ],
+          "uncovered": [
+            "require"
+          ],
+          "oov": [
+            "clause"
+          ]
+        },
+        {
+          "id": "U-CLAUSE-02",
+          "group": "clause_absent_from_standard",
+          "coverage": 0.7331738723781484,
+          "unweighted_coverage": 0.8,
+          "oov_ratio": 0.4,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 5,
+          "anchors": [
+            "quote",
+            "clause",
+            "muntahia",
+            "bittamleek",
+            "standard"
+          ],
+          "uncovered": [
+            "quote"
+          ],
+          "oov": [
+            "quote",
+            "clause"
+          ]
+        },
+        {
+          "id": "U-CLAUSE-03",
+          "group": "clause_absent_from_standard",
+          "coverage": 0.6709243489695039,
+          "unweighted_coverage": 0.75,
+          "oov_ratio": 0.5,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 4,
+          "anchors": [
+            "clause",
+            "standard",
+            "loss",
+            "allocat"
+          ],
+          "uncovered": [
+            "allocat"
+          ],
+          "oov": [
+            "clause",
+            "allocat"
+          ]
+        },
+        {
+          "id": "U-CLAUSE-04",
+          "group": "clause_absent_from_standard",
+          "coverage": 0.6834894158782173,
+          "unweighted_coverage": 0.7142857142857143,
+          "oov_ratio": 0.14285714285714285,
+          "max_uncovered_idf": 4.7930319231576615,
+          "n_anchors": 7,
+          "anchors": [
+            "condition",
+            "clause",
+            "investment",
+            "sukuk",
+            "standard",
+            "impose",
+            "issuer"
+          ],
+          "uncovered": [
+            "impose",
+            "issuer"
+          ],
+          "oov": [
+            "clause"
+          ]
+        },
+        {
+          "id": "U-CLAUSE-05",
+          "group": "clause_absent_from_standard",
+          "coverage": 1.0,
+          "unweighted_coverage": 1.0,
+          "oov_ratio": 0.2,
+          "max_uncovered_idf": null,
+          "n_anchors": 5,
+          "anchors": [
+            "clause",
+            "islamic",
+            "standard",
+            "surplu",
+            "distribution"
+          ],
+          "uncovered": [],
+          "oov": [
+            "clause"
+          ]
+        },
+        {
+          "id": "E-CROSS-01",
+          "group": "cross_standard_comparison",
+          "coverage": 0.24085041129957357,
+          "unweighted_coverage": 0.375,
+          "oov_ratio": 0.25,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 8,
+          "anchors": [
+            "compare",
+            "murabahah",
+            "standard",
+            "treat",
+            "institution'",
+            "ownership",
+            "pass",
+            "client"
+          ],
+          "uncovered": [
+            "compare",
+            "treat",
+            "institution'",
+            "pass",
+            "client"
+          ],
+          "oov": [
+            "compare",
+            "client"
+          ]
+        },
+        {
+          "id": "E-CROSS-02",
+          "group": "cross_standard_comparison",
+          "coverage": 0.31009493640666874,
+          "unweighted_coverage": 0.4444444444444444,
+          "oov_ratio": 0.3333333333333333,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 9,
+          "anchors": [
+            "based",
+            "sukuk",
+            "structur",
+            "reconcile",
+            "standard'",
+            "requirement",
+            "leas",
+            "investment",
+            "underly"
+          ],
+          "uncovered": [
+            "based",
+            "structur",
+            "reconcile",
+            "standard'",
+            "requirement"
+          ],
+          "oov": [
+            "structur",
+            "reconcile",
+            "standard'"
+          ]
+        },
+        {
+          "id": "E-CROSS-03",
+          "group": "cross_standard_comparison",
+          "coverage": 0.5178280174385748,
+          "unweighted_coverage": 0.6923076923076923,
+          "oov_ratio": 0.23076923076923078,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 13,
+          "anchors": [
+            "sukuk",
+            "issue",
+            "structur",
+            "basi",
+            "standard'",
+            "profit",
+            "shar",
+            "rule",
+            "interact",
+            "investment",
+            "return",
+            "certificate",
+            "holder"
+          ],
+          "uncovered": [
+            "structur",
+            "standard'",
+            "interact",
+            "return"
+          ],
+          "oov": [
+            "structur",
+            "standard'",
+            "interact"
+          ]
+        },
+        {
+          "id": "E-CROSS-04",
+          "group": "cross_standard_comparison",
+          "coverage": 0.31354490068156,
+          "unweighted_coverage": 0.375,
+          "oov_ratio": 0.25,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 8,
+          "anchors": [
+            "appropriate",
+            "financ",
+            "work",
+            "capital",
+            "standard",
+            "index",
+            "murabahah",
+            "ground"
+          ],
+          "uncovered": [
+            "financ",
+            "work",
+            "index",
+            "murabahah",
+            "ground"
+          ],
+          "oov": [
+            "index",
+            "ground"
+          ]
+        },
+        {
+          "id": "E-CROSS-05",
+          "group": "cross_standard_comparison",
+          "coverage": 0.8502558415780409,
+          "unweighted_coverage": 0.8888888888888888,
+          "oov_ratio": 0.0,
+          "max_uncovered_idf": 4.099884742597716,
+          "n_anchors": 9,
+          "anchors": [
+            "islamic",
+            "fund",
+            "invest",
+            "reserv",
+            "investment",
+            "sukuk",
+            "condition",
+            "standard",
+            "apply"
+          ],
+          "uncovered": [
+            "apply"
+          ],
+          "oov": []
+        },
+        {
+          "id": "E-CROSS-06",
+          "group": "cross_standard_comparison",
+          "coverage": 0.3683652284409236,
+          "unweighted_coverage": 0.5,
+          "oov_ratio": 0.35714285714285715,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 14,
+          "anchors": [
+            "islamic",
+            "operator",
+            "want",
+            "lease",
+            "head",
+            "office",
+            "invest",
+            "policyholder",
+            "surplu",
+            "provision",
+            "acros",
+            "relevant",
+            "standard",
+            "constrain"
+          ],
+          "uncovered": [
+            "operator",
+            "want",
+            "head",
+            "office",
+            "acros",
+            "relevant",
+            "constrain"
+          ],
+          "oov": [
+            "operator",
+            "want",
+            "head",
+            "office",
+            "acros"
+          ]
+        }
+      ],
+      "stored_hybrid_rerank": [
+        {
+          "id": "H01",
+          "group": "answerable_n7",
+          "coverage": 0.7658921596825089,
+          "unweighted_coverage": 0.7894736842105263,
+          "oov_ratio": 0.10526315789473684,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 19,
+          "n_uncovered": 4,
+          "n_oov": 2,
+          "terms_withheld": "hard-set question text is Git-ignored"
+        },
+        {
+          "id": "H02",
+          "group": "answerable_n7",
+          "coverage": 0.5403445310047471,
+          "unweighted_coverage": 0.5714285714285714,
+          "oov_ratio": 0.07142857142857142,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 14,
+          "n_uncovered": 6,
+          "n_oov": 1,
+          "terms_withheld": "hard-set question text is Git-ignored"
+        },
+        {
+          "id": "H03",
+          "group": "answerable_n7",
+          "coverage": 0.6680545807002812,
+          "unweighted_coverage": 0.7777777777777778,
+          "oov_ratio": 0.3333333333333333,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 9,
+          "n_uncovered": 2,
+          "n_oov": 3,
+          "terms_withheld": "hard-set question text is Git-ignored"
+        },
+        {
+          "id": "H04",
+          "group": "answerable_n7",
+          "coverage": 0.8588722408907564,
+          "unweighted_coverage": 0.9090909090909091,
+          "oov_ratio": 0.18181818181818182,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 11,
+          "n_uncovered": 1,
+          "n_oov": 2,
+          "terms_withheld": "hard-set question text is Git-ignored"
+        },
+        {
+          "id": "H05",
+          "group": "answerable_n7",
+          "coverage": 0.5538533457083479,
+          "unweighted_coverage": 0.6428571428571429,
+          "oov_ratio": 0.2857142857142857,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 14,
+          "n_uncovered": 5,
+          "n_oov": 4,
+          "terms_withheld": "hard-set question text is Git-ignored"
+        },
+        {
+          "id": "H06",
+          "group": "answerable_n7",
+          "coverage": 0.7536655793046888,
+          "unweighted_coverage": 0.8125,
+          "oov_ratio": 0.0625,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 16,
+          "n_uncovered": 3,
+          "n_oov": 1,
+          "terms_withheld": "hard-set question text is Git-ignored"
+        },
+        {
+          "id": "H07",
+          "group": "answerable_n7",
+          "coverage": 0.2952155022671029,
+          "unweighted_coverage": 0.375,
+          "oov_ratio": 0.3125,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 16,
+          "n_uncovered": 10,
+          "n_oov": 5,
+          "terms_withheld": "hard-set question text is Git-ignored"
+        }
+      ]
+    },
+    {
+      "spec": {
+        "min_idf": 2.0,
+        "min_term_length": 4,
+        "fold_suffixes": false,
+        "keep_slash_numerals": true,
+        "drop_frame_terms": true,
+        "context_metadata_keys": [
+          "standard_id",
+          "clause_id",
+          "sub_clause_id",
+          "chunk_id"
+        ],
+        "spec_version": "anchor_spec_v1"
+      },
+      "vocabulary": {
+        "n_documents": 362,
+        "n_terms": 1782
+      },
+      "bm25": [
+        {
+          "id": "H01",
+          "group": "answerable_n7",
+          "coverage": 0.8804199879184537,
+          "unweighted_coverage": 0.8888888888888888,
+          "oov_ratio": 0.05555555555555555,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 18,
+          "n_uncovered": 2,
+          "n_oov": 1,
+          "terms_withheld": "hard-set question text is Git-ignored"
+        },
+        {
+          "id": "H02",
+          "group": "answerable_n7",
+          "coverage": 0.4197587222340498,
+          "unweighted_coverage": 0.5,
+          "oov_ratio": 0.07142857142857142,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 14,
+          "n_uncovered": 7,
+          "n_oov": 1,
+          "terms_withheld": "hard-set question text is Git-ignored"
+        },
+        {
+          "id": "H03",
+          "group": "answerable_n7",
+          "coverage": 0.8073266303926019,
+          "unweighted_coverage": 0.875,
+          "oov_ratio": 0.25,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 8,
+          "n_uncovered": 1,
+          "n_oov": 2,
+          "terms_withheld": "hard-set question text is Git-ignored"
+        },
+        {
+          "id": "H04",
+          "group": "answerable_n7",
+          "coverage": 1.0,
+          "unweighted_coverage": 1.0,
+          "oov_ratio": 0.1,
+          "max_uncovered_idf": null,
+          "n_anchors": 10,
+          "n_uncovered": 0,
+          "n_oov": 1,
+          "terms_withheld": "hard-set question text is Git-ignored"
+        },
+        {
+          "id": "H05",
+          "group": "answerable_n7",
+          "coverage": 0.624277542642212,
+          "unweighted_coverage": 0.7142857142857143,
+          "oov_ratio": 0.2857142857142857,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 14,
+          "n_uncovered": 4,
+          "n_oov": 4,
+          "terms_withheld": "hard-set question text is Git-ignored"
+        },
+        {
+          "id": "H06",
+          "group": "answerable_n7",
+          "coverage": 0.8239984867780812,
+          "unweighted_coverage": 0.8666666666666667,
+          "oov_ratio": 0.0,
+          "max_uncovered_idf": 5.198497031265826,
+          "n_anchors": 15,
+          "n_uncovered": 2,
+          "n_oov": 0,
+          "terms_withheld": "hard-set question text is Git-ignored"
+        },
+        {
+          "id": "H07",
+          "group": "answerable_n7",
+          "coverage": 0.2866126752334562,
+          "unweighted_coverage": 0.375,
+          "oov_ratio": 0.4375,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 16,
+          "n_uncovered": 10,
+          "n_oov": 7,
+          "terms_withheld": "hard-set question text is Git-ignored"
+        },
+        {
+          "id": "U-TERM-01",
+          "group": "term_absent_from_corpus",
+          "coverage": 0.4705285962264032,
+          "unweighted_coverage": 0.6,
+          "oov_ratio": 0.4,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 5,
+          "anchors": [
+            "zakat",
+            "calculated",
+            "assets",
+            "held",
+            "framework"
+          ],
+          "uncovered": [
+            "zakat",
+            "calculated"
+          ],
+          "oov": [
+            "zakat",
+            "calculated"
+          ]
+        },
+        {
+          "id": "U-TERM-02",
+          "group": "term_absent_from_corpus",
+          "coverage": 0.4410647584724834,
+          "unweighted_coverage": 0.5,
+          "oov_ratio": 0.5,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 4,
+          "anchors": [
+            "requirements",
+            "establishing",
+            "waqf",
+            "endowment"
+          ],
+          "uncovered": [
+            "waqf",
+            "endowment"
+          ],
+          "oov": [
+            "waqf",
+            "endowment"
+          ]
+        },
+        {
+          "id": "U-TERM-03",
+          "group": "term_absent_from_corpus",
+          "coverage": 0.23421419086834333,
+          "unweighted_coverage": 0.3333333333333333,
+          "oov_ratio": 0.5,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 6,
+          "anchors": [
+            "organised",
+            "tawarruq",
+            "permitted",
+            "liquidity",
+            "management",
+            "instrument"
+          ],
+          "uncovered": [
+            "organised",
+            "tawarruq",
+            "liquidity",
+            "instrument"
+          ],
+          "oov": [
+            "organised",
+            "tawarruq",
+            "liquidity"
+          ]
+        },
+        {
+          "id": "U-TERM-04",
+          "group": "term_absent_from_corpus",
+          "coverage": 0.630980560624348,
+          "unweighted_coverage": 0.75,
+          "oov_ratio": 0.25,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 4,
+          "anchors": [
+            "cryptocurrency",
+            "used",
+            "subject",
+            "matter"
+          ],
+          "uncovered": [
+            "cryptocurrency"
+          ],
+          "oov": [
+            "cryptocurrency"
+          ]
+        },
+        {
+          "id": "U-TERM-05",
+          "group": "term_absent_from_corpus",
+          "coverage": 0.16182175206913915,
+          "unweighted_coverage": 0.2,
+          "oov_ratio": 0.4,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 5,
+          "anchors": [
+            "controls",
+            "apply",
+            "records",
+            "maintained",
+            "blockchain"
+          ],
+          "uncovered": [
+            "controls",
+            "records",
+            "maintained",
+            "blockchain"
+          ],
+          "oov": [
+            "records",
+            "blockchain"
+          ]
+        },
+        {
+          "id": "U-TERM-06",
+          "group": "term_absent_from_corpus",
+          "coverage": 0.43482596298965887,
+          "unweighted_coverage": 0.5,
+          "oov_ratio": 0.0,
+          "max_uncovered_idf": 5.198497031265826,
+          "n_anchors": 4,
+          "anchors": [
+            "deferred",
+            "recognised",
+            "measured",
+            "transactions"
+          ],
+          "uncovered": [
+            "recognised",
+            "measured"
+          ],
+          "oov": []
+        },
+        {
+          "id": "U-TERM-07",
+          "group": "term_absent_from_corpus",
+          "coverage": 0.10386563649579125,
+          "unweighted_coverage": 0.2,
+          "oov_ratio": 0.4,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 5,
+          "anchors": [
+            "capital",
+            "adequacy",
+            "ratio",
+            "maintain",
+            "exposure"
+          ],
+          "uncovered": [
+            "adequacy",
+            "ratio",
+            "maintain",
+            "exposure"
+          ],
+          "oov": [
+            "adequacy",
+            "exposure"
+          ]
+        },
+        {
+          "id": "U-TERM-08",
+          "group": "term_absent_from_corpus",
+          "coverage": 0.5661716429328699,
+          "unweighted_coverage": 0.6666666666666666,
+          "oov_ratio": 0.3333333333333333,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 3,
+          "anchors": [
+            "disclosures",
+            "required",
+            "concluded"
+          ],
+          "uncovered": [
+            "disclosures"
+          ],
+          "oov": [
+            "disclosures"
+          ]
+        },
+        {
+          "id": "U-STD-01",
+          "group": "standard_absent_from_corpus",
+          "coverage": 1.0,
+          "unweighted_coverage": 1.0,
+          "oov_ratio": 0.0,
+          "max_uncovered_idf": null,
+          "n_anchors": 5,
+          "anchors": [
+            "shari'ah",
+            "standard",
+            "require",
+            "parties",
+            "signed"
+          ],
+          "uncovered": [],
+          "oov": []
+        },
+        {
+          "id": "U-STD-02",
+          "group": "standard_absent_from_corpus",
+          "coverage": 0.39147200233595975,
+          "unweighted_coverage": 0.5,
+          "oov_ratio": 0.0,
+          "max_uncovered_idf": 5.198497031265826,
+          "n_anchors": 4,
+          "anchors": [
+            "permissibility",
+            "conditions",
+            "shari'ah",
+            "standard"
+          ],
+          "uncovered": [
+            "permissibility",
+            "conditions"
+          ],
+          "oov": []
+        },
+        {
+          "id": "U-STD-03",
+          "group": "standard_absent_from_corpus",
+          "coverage": 0.43503545974252633,
+          "unweighted_coverage": 0.6,
+          "oov_ratio": 0.4,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 5,
+          "anchors": [
+            "shari'ah",
+            "standard",
+            "disclosures",
+            "make",
+            "client"
+          ],
+          "uncovered": [
+            "disclosures",
+            "client"
+          ],
+          "oov": [
+            "disclosures",
+            "client"
+          ]
+        },
+        {
+          "id": "U-STD-04",
+          "group": "standard_absent_from_corpus",
+          "coverage": 0.43743025540385744,
+          "unweighted_coverage": 0.5,
+          "oov_ratio": 0.3333333333333333,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 6,
+          "anchors": [
+            "clause",
+            "shari'ah",
+            "standard",
+            "governs",
+            "early",
+            "termination"
+          ],
+          "uncovered": [
+            "governs",
+            "early",
+            "termination"
+          ],
+          "oov": [
+            "clause",
+            "governs"
+          ]
+        },
+        {
+          "id": "U-STD-05",
+          "group": "standard_absent_from_corpus",
+          "coverage": 0.760170469476164,
+          "unweighted_coverage": 0.75,
+          "oov_ratio": 0.25,
+          "max_uncovered_idf": 3.5890591188317256,
+          "n_anchors": 4,
+          "anchors": [
+            "clause",
+            "shari'ah",
+            "standard",
+            "provide"
+          ],
+          "uncovered": [
+            "provide"
+          ],
+          "oov": [
+            "clause"
+          ]
+        },
+        {
+          "id": "U-STD-06",
+          "group": "standard_absent_from_corpus",
+          "coverage": 0.3056287285213359,
+          "unweighted_coverage": 0.42857142857142855,
+          "oov_ratio": 0.2857142857142857,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 7,
+          "anchors": [
+            "shari'ah",
+            "standard",
+            "permit",
+            "arrangement",
+            "described",
+            "preceding",
+            "paragraph"
+          ],
+          "uncovered": [
+            "permit",
+            "arrangement",
+            "preceding",
+            "paragraph"
+          ],
+          "oov": [
+            "permit",
+            "paragraph"
+          ]
+        },
+        {
+          "id": "U-CLAUSE-01",
+          "group": "clause_absent_from_standard",
+          "coverage": 0.6983373153889889,
+          "unweighted_coverage": 0.75,
+          "oov_ratio": 0.25,
+          "max_uncovered_idf": 4.7930319231576615,
+          "n_anchors": 4,
+          "anchors": [
+            "clause",
+            "murabahah",
+            "standard",
+            "require"
+          ],
+          "uncovered": [
+            "require"
+          ],
+          "oov": [
+            "clause"
+          ]
+        },
+        {
+          "id": "U-CLAUSE-02",
+          "group": "clause_absent_from_standard",
+          "coverage": 1.0,
+          "unweighted_coverage": 1.0,
+          "oov_ratio": 0.25,
+          "max_uncovered_idf": null,
+          "n_anchors": 4,
+          "anchors": [
+            "clause",
+            "muntahia",
+            "bittamleek",
+            "standard"
+          ],
+          "uncovered": [],
+          "oov": [
+            "clause"
+          ]
+        },
+        {
+          "id": "U-CLAUSE-03",
+          "group": "clause_absent_from_standard",
+          "coverage": 0.6851837053291515,
+          "unweighted_coverage": 0.75,
+          "oov_ratio": 0.5,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 4,
+          "anchors": [
+            "clause",
+            "standard",
+            "losses",
+            "allocated"
+          ],
+          "uncovered": [
+            "allocated"
+          ],
+          "oov": [
+            "clause",
+            "allocated"
+          ]
+        },
+        {
+          "id": "U-CLAUSE-04",
+          "group": "clause_absent_from_standard",
+          "coverage": 0.6923848261006198,
+          "unweighted_coverage": 0.7142857142857143,
+          "oov_ratio": 0.14285714285714285,
+          "max_uncovered_idf": 4.7930319231576615,
+          "n_anchors": 7,
+          "anchors": [
+            "conditions",
+            "clause",
+            "investment",
+            "sukuk",
+            "standard",
+            "impose",
+            "issuer"
+          ],
+          "uncovered": [
+            "impose",
+            "issuer"
+          ],
+          "oov": [
+            "clause"
+          ]
+        },
+        {
+          "id": "U-CLAUSE-05",
+          "group": "clause_absent_from_standard",
+          "coverage": 1.0,
+          "unweighted_coverage": 1.0,
+          "oov_ratio": 0.2,
+          "max_uncovered_idf": null,
+          "n_anchors": 5,
+          "anchors": [
+            "clause",
+            "islamic",
+            "standard",
+            "surplus",
+            "distribution"
+          ],
+          "uncovered": [],
+          "oov": [
+            "clause"
+          ]
+        },
+        {
+          "id": "E-CROSS-01",
+          "group": "cross_standard_comparison",
+          "coverage": 0.2746645258072905,
+          "unweighted_coverage": 0.42857142857142855,
+          "oov_ratio": 0.2857142857142857,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 7,
+          "anchors": [
+            "murabahah",
+            "standard",
+            "treat",
+            "institution's",
+            "ownership",
+            "passes",
+            "client"
+          ],
+          "uncovered": [
+            "treat",
+            "institution's",
+            "passes",
+            "client"
+          ],
+          "oov": [
+            "treat",
+            "client"
+          ]
+        },
+        {
+          "id": "E-CROSS-02",
+          "group": "cross_standard_comparison",
+          "coverage": 0.4067071940610712,
+          "unweighted_coverage": 0.5555555555555556,
+          "oov_ratio": 0.2222222222222222,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 9,
+          "anchors": [
+            "based",
+            "sukuk",
+            "structured",
+            "standard's",
+            "requirements",
+            "leased",
+            "investment",
+            "underlying",
+            "assets"
+          ],
+          "uncovered": [
+            "based",
+            "structured",
+            "standard's",
+            "requirements"
+          ],
+          "oov": [
+            "structured",
+            "standard's"
+          ]
+        },
+        {
+          "id": "E-CROSS-03",
+          "group": "cross_standard_comparison",
+          "coverage": 0.4369606649477008,
+          "unweighted_coverage": 0.6153846153846154,
+          "oov_ratio": 0.23076923076923078,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 13,
+          "anchors": [
+            "sukuk",
+            "issue",
+            "structured",
+            "basis",
+            "standard's",
+            "profit",
+            "sharing",
+            "rules",
+            "interact",
+            "investment",
+            "returns",
+            "certificate",
+            "holders"
+          ],
+          "uncovered": [
+            "structured",
+            "standard's",
+            "sharing",
+            "interact",
+            "returns"
+          ],
+          "oov": [
+            "structured",
+            "standard's",
+            "interact"
+          ]
+        },
+        {
+          "id": "E-CROSS-04",
+          "group": "cross_standard_comparison",
+          "coverage": 0.388608501738207,
+          "unweighted_coverage": 0.4444444444444444,
+          "oov_ratio": 0.3333333333333333,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 9,
+          "anchors": [
+            "appropriate",
+            "financing",
+            "working",
+            "capital",
+            "standards",
+            "indexed",
+            "murabahah",
+            "grounds",
+            "standard"
+          ],
+          "uncovered": [
+            "financing",
+            "working",
+            "indexed",
+            "murabahah",
+            "grounds"
+          ],
+          "oov": [
+            "working",
+            "indexed",
+            "grounds"
+          ]
+        },
+        {
+          "id": "E-CROSS-05",
+          "group": "cross_standard_comparison",
+          "coverage": 0.7111108293905352,
+          "unweighted_coverage": 0.7777777777777778,
+          "oov_ratio": 0.0,
+          "max_uncovered_idf": 4.505349850705881,
+          "n_anchors": 9,
+          "anchors": [
+            "islamic",
+            "fund",
+            "invest",
+            "reserves",
+            "investment",
+            "sukuk",
+            "conditions",
+            "standard",
+            "apply"
+          ],
+          "uncovered": [
+            "invest",
+            "apply"
+          ],
+          "oov": []
+        },
+        {
+          "id": "E-CROSS-06",
+          "group": "cross_standard_comparison",
+          "coverage": 0.34547618071443315,
+          "unweighted_coverage": 0.42857142857142855,
+          "oov_ratio": 0.35714285714285715,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 14,
+          "anchors": [
+            "islamic",
+            "operator",
+            "wants",
+            "lease",
+            "head",
+            "office",
+            "invest",
+            "policyholder",
+            "surplus",
+            "provisions",
+            "across",
+            "relevant",
+            "standards",
+            "constrain"
+          ],
+          "uncovered": [
+            "operator",
+            "wants",
+            "head",
+            "office",
+            "across",
+            "relevant",
+            "standards",
+            "constrain"
+          ],
+          "oov": [
+            "operator",
+            "wants",
+            "head",
+            "office",
+            "across"
+          ]
+        }
+      ],
+      "stored_hybrid_rerank": [
+        {
+          "id": "H01",
+          "group": "answerable_n7",
+          "coverage": 0.8326120318510256,
+          "unweighted_coverage": 0.8333333333333334,
+          "oov_ratio": 0.05555555555555555,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 18,
+          "n_uncovered": 3,
+          "n_oov": 1,
+          "terms_withheld": "hard-set question text is Git-ignored"
+        },
+        {
+          "id": "H02",
+          "group": "answerable_n7",
+          "coverage": 0.5315015815578438,
+          "unweighted_coverage": 0.5714285714285714,
+          "oov_ratio": 0.07142857142857142,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 14,
+          "n_uncovered": 6,
+          "n_oov": 1,
+          "terms_withheld": "hard-set question text is Git-ignored"
+        },
+        {
+          "id": "H03",
+          "group": "answerable_n7",
+          "coverage": 0.8073266303926019,
+          "unweighted_coverage": 0.875,
+          "oov_ratio": 0.25,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 8,
+          "n_uncovered": 1,
+          "n_oov": 2,
+          "terms_withheld": "hard-set question text is Git-ignored"
+        },
+        {
+          "id": "H04",
+          "group": "answerable_n7",
+          "coverage": 1.0,
+          "unweighted_coverage": 1.0,
+          "oov_ratio": 0.1,
+          "max_uncovered_idf": null,
+          "n_anchors": 10,
+          "n_uncovered": 0,
+          "n_oov": 1,
+          "terms_withheld": "hard-set question text is Git-ignored"
+        },
+        {
+          "id": "H05",
+          "group": "answerable_n7",
+          "coverage": 0.624277542642212,
+          "unweighted_coverage": 0.7142857142857143,
+          "oov_ratio": 0.2857142857142857,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 14,
+          "n_uncovered": 4,
+          "n_oov": 4,
+          "terms_withheld": "hard-set question text is Git-ignored"
+        },
+        {
+          "id": "H06",
+          "group": "answerable_n7",
+          "coverage": 0.8239984867780812,
+          "unweighted_coverage": 0.8666666666666667,
+          "oov_ratio": 0.0,
+          "max_uncovered_idf": 5.198497031265826,
+          "n_anchors": 15,
+          "n_uncovered": 2,
+          "n_oov": 0,
+          "terms_withheld": "hard-set question text is Git-ignored"
+        },
+        {
+          "id": "H07",
+          "group": "answerable_n7",
+          "coverage": 0.18378391324795681,
+          "unweighted_coverage": 0.25,
+          "oov_ratio": 0.4375,
+          "max_uncovered_idf": 5.8916442118257715,
+          "n_anchors": 16,
+          "n_uncovered": 12,
+          "n_oov": 7,
+          "terms_withheld": "hard-set question text is Git-ignored"
+        }
+      ]
+    }
+  ]
+}

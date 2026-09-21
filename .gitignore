@@ -1,0 +1,38 @@
+# Python environments and local configuration
+.venv/
+__pycache__/
+*.py[cod]
+.env
+
+# Licensed or otherwise non-public research materials
+/data/private/
+/data/raw/
+/data/derived/
+
+# Local run material; public reporting artifacts are curated separately.
+/runs/
+/artifacts/
+/logs/
+
+# Smoke-test logs reproduce retrieved AAOIFI clause text; do not publish.
+/reports/smoke_test_h02.md
+/reports/smoke_test_h07.md
+/reports/e2e_batch_smoke_results.json
+
+# Contains the entire verbatim 362-clause corpus as a paste-in bundle.
+/reports/frontier_manual_test_bundle.md
+
+# Scratch space; several files here hold the full verbatim corpus.
+/tmp/
+
+# Full-view answer traces contain verbatim clause text, prompts and responses.
+# The redacted public view (reports/replay_n7_public_traces.jsonl) is committable;
+# see aaoifi_rag.reporting.trace.assert_private_destination.
+*_traces_full.jsonl
+
+# Tool and editor state
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.vscode/
+.idea/

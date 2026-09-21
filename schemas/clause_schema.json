@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AAOIFI Clause Record",
+  "description": "Structure for one clause extracted from a researcher-supplied AAOIFI standard. This schema contains no AAOIFI clause data.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "standard_id",
+    "section_id",
+    "clause_id",
+    "sub_clause_id",
+    "text",
+    "source_page",
+    "disagreement_tag",
+    "last_updated"
+  ],
+  "properties": {
+    "standard_id": {
+      "type": "string",
+      "enum": ["SS8", "SS9", "SS13", "SS17", "SS26"],
+      "description": "Identifier of the in-scope AAOIFI Shari'ah Standard."
+    },
+    "section_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Section identifier as printed in the source standard."
+    },
+    "clause_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Clause identifier as printed in the source standard."
+    },
+    "occurrence_index": {
+      "type": "integer",
+      "minimum": 0,
+      "default": 0,
+      "description": "Zero-based source-order occurrence for repeated standard_id plus clause_id pairs. It preserves source-faithful clause numbering while making repeated printed identifiers addressable."
+    },
+    "sub_clause_id": {
+      "type": ["string", "null"],
+      "default": null,
+      "description": "Sub-clause identifier when the source standard defines one; otherwise null."
+    },
+    "text": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Verbatim clause text retained only in the private corpus."
+    },
+    "source_page": {
+      "type": ["integer", "null"],
+      "minimum": 1,
+      "default": null,
+      "description": "One-based PDF page number when available; otherwise null."
+    },
+    "disagreement_tag": {
+      "type": ["string", "null"],
+      "default": null,
+      "description": "Reserved for a future qualified-expert review process. It must remain null in Stage 1; no simulated or placeholder values are permitted."
+    },
+    "last_updated": {
+      "type": "string",
+      "format": "date-time",
+      "description": "UTC timestamp recording the most recent change to this private record."
+    }
+  }
+}

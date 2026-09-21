@@ -1,0 +1,68 @@
+{
+  "run_id": "replay_n7_20260906T113948Z",
+  "source": "scripts/replay_n7_router.py",
+  "replayed_from": "e2e_batch_smoke_results.json",
+  "policy": {
+    "policy_version": "gates_v1",
+    "max_echo_ratio": 0.85,
+    "enable_echo_gate": true,
+    "enable_heading_only_gate": true,
+    "enable_citation_gate": true,
+    "enable_script_gate": true,
+    "enable_degenerate_decoding_gate": true,
+    "enable_clause_grounding_gate": true,
+    "min_reranker_top_1": null,
+    "enable_reranker_top_1_gate": false,
+    "min_reranker_margin": null,
+    "enable_reranker_margin_gate": false,
+    "min_anchor_coverage": null,
+    "enable_anchoring_gate": false
+  },
+  "environment": {
+    "replay_script": "replay_n7_router.py",
+    "replay_is_gpu_free": true,
+    "generation_source": "stored Colab run, replayed verbatim",
+    "stored_run_label": "7-item Colab smoke test, not the n=25-30+ pilot evaluation. Counts are descriptive only. No statistical significance is claimed.",
+    "package_versions_at_generation": {
+      "transformers": "5.16.0.dev0",
+      "bitsandbytes": "0.50.2",
+      "torch": "2.11.0+cu128",
+      "FlagEmbedding": "1.4.0"
+    },
+    "retrieval_policy_at_generation": "union(BM25 clause-level k=10, dense k=10) -> rerank -> top 5",
+    "python": "3.12.13"
+  },
+  "label": "routing_metrics_v1",
+  "n_items": 7,
+  "n_answer": 1,
+  "n_abstain": 4,
+  "n_escalate": 2,
+  "coverage": 0.142857,
+  "abstention_rate": 0.571429,
+  "escalation_rate": 0.285714,
+  "routing_agreement": 0.142857,
+  "n_decision_matches_expected": 1,
+  "n_over_abstention": 6,
+  "triggering_gates": {
+    "none": 1,
+    "model_did_not_abstain": 4,
+    "substantive_answer": 1,
+    "no_self_contradiction": 1
+  },
+  "clause_recall": {
+    "macro": 0.571429,
+    "micro": 0.529412,
+    "n_gold_total": 17,
+    "n_gold_in_context_total": 9,
+    "n_all_gold_in_context": 1,
+    "n_any_gold_in_context": 7,
+    "note": "macro is the mean of per-item recall; micro is total hits over total golds. They differ at n=7 and must be labelled."
+  },
+  "not_computable": {
+    "residual_error_rate": "needs a correctness judgement on served answers; the mechanical gates cannot distinguish a fluent well-cited wrong answer from a right one",
+    "escalation_precision": "no hard-set item has expected_behavior='escalate', so there are no positives; undefined rather than small",
+    "escalation_recall": "no hard-set item has expected_behavior='escalate', so there are no positives; undefined rather than small"
+  },
+  "intervals": "omitted: n=7 < min_n=30",
+  "verification_note": "Descriptive only. Labels are corpus_cross_reference, not qualified_scholar_review. No significance is claimed."
+}

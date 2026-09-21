@@ -1,0 +1,383 @@
+{
+  "experiment": "prompt_ablation_v1",
+  "timestamp": "2026-09-15T20:59:29.389687+00:00",
+  "model": "inception42/Jais-2-8B-Chat",
+  "hub_revision": "da0e1639cd92b508b24120f7f77f5270a8465dc4",
+  "generation_config": {
+    "model_id": "inception42/Jais-2-8B-Chat",
+    "hub_revision": "da0e1639cd92b508b24120f7f77f5270a8465dc4",
+    "do_sample": false,
+    "max_new_tokens": 512,
+    "seed": 42,
+    "deterministic_algorithms": false
+  },
+  "n_items": 7,
+  "n_variants": 5,
+  "variants": {
+    "answer_context_only_v1": {
+      "prompt_version": "answer_context_only_v1",
+      "prompt_config": {
+        "version": "answer_context_only_v1",
+        "system_prompt": "You are answering a question using only the retrieved AAOIFI clause excerpts provided in the user message. Do not use any other knowledge. If the provided excerpts are insufficient to answer, reply exactly: I cannot answer from the given context",
+        "user_template": "Retrieved clause excerpts (this is the only source you may use):\n\n{context}\n\nQuestion:\n{query}\n\nAnswer only from the excerpts above. If they are insufficient, reply exactly: I cannot answer from the given context",
+        "abstention_line": "I cannot answer from the given context"
+      },
+      "items": [
+        {
+          "item_id": "H01",
+          "status": "abstained",
+          "response_text": "I cannot answer from the given context",
+          "input_tokens": 676,
+          "new_tokens": 8,
+          "generation_seconds": 5.816
+        },
+        {
+          "item_id": "H02",
+          "status": "abstained",
+          "response_text": "I cannot answer from the given context",
+          "input_tokens": 718,
+          "new_tokens": 8,
+          "generation_seconds": 5.159
+        },
+        {
+          "item_id": "H03",
+          "status": "abstained",
+          "response_text": "I cannot answer from the given context",
+          "input_tokens": 819,
+          "new_tokens": 8,
+          "generation_seconds": 5.652
+        },
+        {
+          "item_id": "H04",
+          "status": "abstained",
+          "response_text": "I cannot answer from the given context",
+          "input_tokens": 560,
+          "new_tokens": 8,
+          "generation_seconds": 4.154
+        },
+        {
+          "item_id": "H05",
+          "status": "abstained",
+          "response_text": "**I cannot answer from the given context**",
+          "input_tokens": 662,
+          "new_tokens": 10,
+          "generation_seconds": 5.185
+        },
+        {
+          "item_id": "H06",
+          "status": "abstained",
+          "response_text": "I cannot answer from the given context",
+          "input_tokens": 823,
+          "new_tokens": 8,
+          "generation_seconds": 5.82
+        },
+        {
+          "item_id": "H07",
+          "status": "abstained",
+          "response_text": "I cannot answer from the given context",
+          "input_tokens": 761,
+          "new_tokens": 9,
+          "generation_seconds": 5.614
+        }
+      ],
+      "summary": {
+        "n_answered": 0,
+        "n_abstained": 7,
+        "n_empty": 0,
+        "answer_rate": 0.0
+      }
+    },
+    "single_abstention_v2": {
+      "prompt_version": "single_abstention_v2",
+      "prompt_config": {
+        "version": "single_abstention_v2",
+        "system_prompt": "You are answering a question using only the retrieved AAOIFI clause excerpts provided in the user message. Do not use any other knowledge. If the provided excerpts are insufficient to answer, reply exactly: I cannot answer from the given context",
+        "user_template": "Retrieved clause excerpts (this is the only source you may use):\n\n{context}\n\nQuestion:\n{query}\n\nAnswer the question using only the excerpts above.",
+        "abstention_line": "I cannot answer from the given context"
+      },
+      "items": [
+        {
+          "item_id": "H01",
+          "status": "answered",
+          "response_text": "**Yes, based on the provided excerpts, the Institution that acts as the arranger of the syndicate is entitled to an arrangement fee to be paid by the participants in the syndicate.** This is directly stated in the first retrieved clause excerpt: \"If the Murabahah is carried out by means of syndicated financing, the Institution which acts as the arranger of the syndicate is entitled to an arrangement fee to be paid by the participants in the syndicate.\"",
+          "input_tokens": 663,
+          "new_tokens": 96,
+          "generation_seconds": 14.938
+        },
+        {
+          "item_id": "H02",
+          "status": "abstained",
+          "response_text": "**I cannot answer from the given context.**",
+          "input_tokens": 705,
+          "new_tokens": 10,
+          "generation_seconds": 5.946
+        },
+        {
+          "item_id": "H03",
+          "status": "abstained",
+          "response_text": "**I cannot answer from the given context**",
+          "input_tokens": 806,
+          "new_tokens": 10,
+          "generation_seconds": 6.525
+        },
+        {
+          "item_id": "H04",
+          "status": "abstained",
+          "response_text": "**I cannot answer from the given context**",
+          "input_tokens": 547,
+          "new_tokens": 10,
+          "generation_seconds": 4.88
+        },
+        {
+          "item_id": "H05",
+          "status": "abstained",
+          "response_text": "**I cannot answer from the given context**",
+          "input_tokens": 649,
+          "new_tokens": 10,
+          "generation_seconds": 5.836
+        },
+        {
+          "item_id": "H06",
+          "status": "abstained",
+          "response_text": "**I cannot answer from the given context**",
+          "input_tokens": 810,
+          "new_tokens": 10,
+          "generation_seconds": 6.882
+        },
+        {
+          "item_id": "H07",
+          "status": "abstained",
+          "response_text": "**I cannot answer from the given context**",
+          "input_tokens": 748,
+          "new_tokens": 10,
+          "generation_seconds": 6.421
+        }
+      ],
+      "summary": {
+        "n_answered": 1,
+        "n_abstained": 6,
+        "n_empty": 0,
+        "answer_rate": 0.143
+      }
+    },
+    "synthesis_guidance_v3": {
+      "prompt_version": "synthesis_guidance_v3",
+      "prompt_config": {
+        "version": "synthesis_guidance_v3",
+        "system_prompt": "You are an AAOIFI compliance assistant. Answer questions using only the retrieved clause excerpts provided in the user message. You may synthesise information across multiple excerpts to form a complete answer. Cite excerpts by their [n] reference numbers. If the excerpts contain no relevant information at all, reply exactly: I cannot answer from the given context",
+        "user_template": "Retrieved clause excerpts (this is the only source you may use):\n\n{context}\n\nQuestion:\n{query}\n\nUse the excerpts above to answer. Even if only part of the answer is covered, provide what the excerpts support and cite the relevant excerpt numbers [n]. If the excerpts contain nothing relevant, reply exactly: I cannot answer from the given context",
+        "abstention_line": "I cannot answer from the given context"
+      },
+      "items": [
+        {
+          "item_id": "H01",
+          "status": "answered",
+          "response_text": "**Answer:**\n\nYes, if a Murabahah is carried out by means of syndicated financing, the Institution which acts as the arranger of the syndicate is entitled to an arrangement fee to be paid by the participants in the syndicate [1]. This is a specific type of fee related to syndicated financing, distinct from a general commitment fee [5] or a fee solely for providing a credit facility [5].",
+          "input_tokens": 728,
+          "new_tokens": 87,
+          "generation_seconds": 15.162
+        },
+        {
+          "item_id": "H02",
+          "status": "abstained",
+          "response_text": "**I cannot answer from the given context**",
+          "input_tokens": 770,
+          "new_tokens": 10,
+          "generation_seconds": 6.479
+        },
+        {
+          "item_id": "H03",
+          "status": "answered",
+          "response_text": "**Excerpt Support:**\nThe capital provider is permitted to obtain guarantees from the Mudarib that are adequate and enforceable. This is circumscribed by a condition that the capital provider will not enforce these guarantees except in cases of misconduct, negligence or breach of contract on the part of Mudarib. (SS13 §6 occ=0 page=8 id=clause:SS13:6:occurrence:0)",
+          "input_tokens": 871,
+          "new_tokens": 89,
+          "generation_seconds": 16.15
+        },
+        {
+          "item_id": "H04",
+          "status": "abstained",
+          "response_text": "**I cannot answer from the given context**",
+          "input_tokens": 612,
+          "new_tokens": 10,
+          "generation_seconds": 5.169
+        },
+        {
+          "item_id": "H05",
+          "status": "abstained",
+          "response_text": "**I cannot answer from the given context**",
+          "input_tokens": 714,
+          "new_tokens": 10,
+          "generation_seconds": 6.031
+        },
+        {
+          "item_id": "H06",
+          "status": "abstained",
+          "response_text": "**I cannot answer from the given context**",
+          "input_tokens": 875,
+          "new_tokens": 10,
+          "generation_seconds": 7.001
+        },
+        {
+          "item_id": "H07",
+          "status": "abstained",
+          "response_text": "**I cannot answer from the given context**",
+          "input_tokens": 813,
+          "new_tokens": 10,
+          "generation_seconds": 6.567
+        }
+      ],
+      "summary": {
+        "n_answered": 2,
+        "n_abstained": 5,
+        "n_empty": 0,
+        "answer_rate": 0.286
+      }
+    },
+    "specific_trigger_v4": {
+      "prompt_version": "specific_trigger_v4",
+      "prompt_config": {
+        "version": "specific_trigger_v4",
+        "system_prompt": "You are answering a question using only the retrieved AAOIFI clause excerpts provided in the user message. Do not use any other knowledge.",
+        "user_template": "Retrieved clause excerpts (this is the only source you may use):\n\n{context}\n\nQuestion:\n{query}\n\nAnswer only from the excerpts above. Cite relevant excerpts by their [n] reference numbers.\n\nAbstain ONLY if NONE of the excerpts mention the topic of the question at all. In that case, reply exactly: I cannot answer from the given context",
+        "abstention_line": "I cannot answer from the given context"
+      },
+      "items": [
+        {
+          "item_id": "H01",
+          "status": "answered",
+          "response_text": "**Answer:**\n\nYes, according to SS8 §2/4/4, \"the Institution which acts as the arranger of the syndicate is entitled to an arrangement fee to be paid by the participants in the syndicate.\"\n\nThis sits with SS8's rules on a fee for providing a credit facility (which is prohibited in SS8 §2/4/2) as an arrangement fee is a different nature. An arrangement fee, as described in SS8 §2/4/4, is specifically mentioned in the context of syndicated financing, implying a distinct permissible charge related to the structuring of the financing for the Murabahah contract.",
+          "input_tokens": 687,
+          "new_tokens": 133,
+          "generation_seconds": 19.988
+        },
+        {
+          "item_id": "H02",
+          "status": "abstained",
+          "response_text": "I cannot answer from the given context",
+          "input_tokens": 729,
+          "new_tokens": 8,
+          "generation_seconds": 5.975
+        },
+        {
+          "item_id": "H03",
+          "status": "answered",
+          "response_text": "الشرح: The question asks about the enforceability of guarantees from the Mudarib under SS13. Excerpt [1] directly addresses this, stating the capital provider is \"permitted to obtain guarantees from the Mudarib that are adequate and enforceable.\" It further clarifies the condition for enforcement: \"This is circumscribed by a condition that the capital provider will not enforce these guarantees except in cases of misconduct, negligence or breach of contract on the part of Mudarib.\" Therefore, the capital provider *may* obtain guarantees, and they *can be enforced* under specific conditions related to Mudarib's misconduct, negligence, or breach of contract.",
+          "input_tokens": 830,
+          "new_tokens": 136,
+          "generation_seconds": 21.467
+        },
+        {
+          "item_id": "H04",
+          "status": "abstained",
+          "response_text": "I cannot answer from the given context",
+          "input_tokens": 571,
+          "new_tokens": 8,
+          "generation_seconds": 4.656
+        },
+        {
+          "item_id": "H05",
+          "status": "abstained",
+          "response_text": "I cannot answer from the given context",
+          "input_tokens": 673,
+          "new_tokens": 8,
+          "generation_seconds": 5.5
+        },
+        {
+          "item_id": "H06",
+          "status": "answered",
+          "response_text": "الشرح: لا يوجد في المقتطفات المقدمة أي إشارة إلى أن المؤسسة يمكنها الاحتفاظ بالمبلغ المذكور \"لغرضها الخاص\" أو تحديد أين يجب أن \"يتم إنفاقه\" بخلاف الإشارة إلى أنه يجب أن يكون \"في أعمال البر\" أو على \"أوجه الخير\" كما هو موضح في المقتطف [1]. لا يوجد أي نص مباشر يتناول هذا السؤال المحدد.",
+          "input_tokens": 834,
+          "new_tokens": 75,
+          "generation_seconds": 14.572
+        },
+        {
+          "item_id": "H07",
+          "status": "abstained",
+          "response_text": "I cannot answer from the given context",
+          "input_tokens": 772,
+          "new_tokens": 8,
+          "generation_seconds": 6.29
+        }
+      ],
+      "summary": {
+        "n_answered": 3,
+        "n_abstained": 4,
+        "n_empty": 0,
+        "answer_rate": 0.429
+      }
+    },
+    "strong_guidance_v5": {
+      "prompt_version": "strong_guidance_v5",
+      "prompt_config": {
+        "version": "strong_guidance_v5",
+        "system_prompt": "You are an expert AAOIFI compliance assistant. Your task is to answer questions using ONLY the retrieved clause excerpts provided in the user message. Do not use any outside knowledge.\n\nRULES:\n1. You MUST answer entirely in English. Do not use Arabic script.\n2. You may synthesise information across multiple excerpts to form a complete answer.\n3. Cite excerpts by their [n] reference numbers.\n4. Abstain ONLY if the excerpts contain absolutely no relevant information about the topic of the question. If so, reply exactly: I cannot answer from the given context",
+        "user_template": "Retrieved clause excerpts (this is the only source you may use):\n\n{context}\n\nQuestion:\n{query}\n\nAnswer the question in English using only the excerpts above. Cite relevant excerpts by their [n] reference numbers.\n\nIf the excerpts are completely irrelevant to the question, reply exactly: I cannot answer from the given context",
+        "abstention_line": "I cannot answer from the given context"
+      },
+      "items": [
+        {
+          "item_id": "H01",
+          "status": "answered",
+          "response_text": "**Yes, based on SS8 §2/4/4, the Institution which acts as the arranger of the syndicate is entitled to an arrangement fee to be paid by the participants in the syndicate (ref [1]).** This directly states the entitlement to an arrangement fee under specific conditions of syndicated financing.\n\n**Regarding the potential conflict with rules on a commitment fee and a fee for providing a credit facility:**\n\n*   The provided excerpts discuss the Institution's rights related to the *arrangement* of a syndicated financing Murabahah and an *arrangement fee* (ref [1], [5]).\n*   SS8 §2/4/2 explicitly states: \"It is not permissible for the Institution to receive a fee for providing a credit facility (ref [5]).\"\n*   There are no other excerpts directly addressing a \"commitment fee\" or \"fee for providing a credit facility\" in the context of the Institution's role in a Murabahah transaction, particularly one arranged through syndication.\n\nTherefore, based solely on the provided text:\n\n*   The text *directly affirms* the entitlement to an arrangement fee related to syndicated financing Murabahah (ref [1], [5]).\n*   The text *explicitly prohibits* the receipt of a fee for providing a credit facility (ref [5]).\n*   The text *does not provide any information* about a \"commitment fee\" or a fee for \"providing a credit facility\" as a charge for the Institution's role in a Murabahah transaction, particularly one arranged through syndication.",
+          "input_tokens": 770,
+          "new_tokens": 331,
+          "generation_seconds": 44.565
+        },
+        {
+          "item_id": "H02",
+          "status": "answered",
+          "response_text": "**Based on the provided excerpts:**\n\nThe question asks if the lease agreement and the promise/undertaking to transfer ownership can be combined into a single, legally binding document in an Ijarah Muntahia Bittamleek contract.\n\nExcerpt [2] directly addresses this by explaining the conditions for transfer of ownership in an Ijarah contract that includes a gift contingent on rent payment.\n\nAccording to excerpt [2], \"In case the Ijarah contract is combined, through a separate document, with a gift contingent upon the condition that the remaining rent instalments be paid, the ownership to the leased property is transferred to the lessee if the condition is fulfilled, without the need for any other procedure to be adopted or a document to be signed.\"\n\nThis statement indicates a specific scenario where a \"separate document\" is used to document the transfer of ownership. It does not explicitly state that the lease agreement *and* the promise of transfer *must* be in a single document. In fact, the requirement of a \"separate document\" for the transfer itself, even when combined with a gift, suggests that the core elements of the Ijarah contract (including the promise of transfer) originate from a distinct, formal document.\n\nThe crucial part of excerpt [2] is the condition for transfer: \"the ownership to the leased property is transferred to the lessee if the condition is fulfilled.\" This implies that the *act* of transfer, when triggered by the specified condition, occurs via a defined legal process, potentially the \"separate document\" mentioned.\n\nTherefore, based on the provided text, there is no explicit statement or provision that *requires* the lease agreement and the promise of ownership transfer to be combined into a single document. The text describes a specific condition under which ownership *is* transferred, but it doesn't mandate the *form* of the document(s) under which this transfer occurs, particularly in the context of an Ijarah contract combined with a gift. The \"separate document\" mentioned for the transfer itself, even under the gift condition, implies a distinct legal instrument for the transfer event.\n\nThe rules on transfer and promise (excerpt [4]) discuss the binding nature of a promise to transfer and the methods of transfer, but these rules appear to be general principles within an Ijarah contract, not a requirement for all elements of an Ijarah Muntahia Bittamleek contract to be solely contained within a single document. The SS9 §8/1",
+          "input_tokens": 812,
+          "new_tokens": 512,
+          "generation_seconds": 67.077
+        },
+        {
+          "item_id": "H03",
+          "status": "abstained",
+          "response_text": "**I cannot answer from the given context**",
+          "input_tokens": 913,
+          "new_tokens": 10,
+          "generation_seconds": 7.478
+        },
+        {
+          "item_id": "H04",
+          "status": "abstained",
+          "response_text": "**I cannot answer from the given context**",
+          "input_tokens": 654,
+          "new_tokens": 10,
+          "generation_seconds": 5.706
+        },
+        {
+          "item_id": "H05",
+          "status": "answered",
+          "response_text": "**Management Relationship:**\nThe relationship between the company and the policyholdersigently fund for management is described in [1].\n[1] SS26 §4/2 occ=0 page=7 id=clause:SS26:4/2:occurrence:0 states: \"The relationship between the company and the policyholdersigently fund which is a Wakalah relationship in regard to management, and a Mudarabah or investment agency relationship in regard to the investment of the fundفرنسية assets.\"\n\nThis means the company acts as a Wakalah for the management of the fund.\n\n**Investment Relationship:**\nThe relationship for investment of the fund's assets is described in [1] and elaborated in [2].\n[1] SS26 §4/2 occ=0 page=7 id=clause:SS26:4/2:occurrence:0 states the Wakalah relationship exists \"in regard to *the investment of the fund الشيرازي assets*.\"\n[2] SS26 §3 occ=0 page=6 id=clause:SS26:3:occurrence:0 states: \"In addition to managing the insurance operations, the committee of policyholders or the company also assumes the responsibility of investing the assets of the fund through Mudarabah or investment agency.\" It further clarifies the investment management structure, particularly when the company is involved.\n\n**Would treating both management and investment as Mudarabah only, with no Wakalah component, match that description?**\nBased on the provided excerpts, the description in [1] for management is \"Wakalah relationship in regard to management.\" It also mentions a \"Mudarabah *or investment agency* relationship in regard to the investment of the fund الشيرازي assets.\" The explicit mention of both a Wakalah relationship for management and a Mudarabah/investment agency relationship for investment, alongside the fund's assets, directly describes the two-pronged relationship under SS26 §4/2 and the elaboration in §3.\n\nThe question proposes \"treating both management and investment as Mudarabah *only*.\" The term \"only\" is crucial here. While the management aspect is clearly a Wakalah, the provided text *explicitly states* the investment relationship involves \"Mudarabah *or investment agency*.\" To reduce this to \"Mudarabah *only*\" for both management and investment would be an oversimplification or a misinterpretation of the textual description provided. The SS26 documents detail a distinct Wakalah (management)",
+          "input_tokens": 756,
+          "new_tokens": 512,
+          "generation_seconds": 66.121
+        },
+        {
+          "item_id": "H06",
+          "status": "abstained",
+          "response_text": "**I cannot answer from the given context**",
+          "input_tokens": 917,
+          "new_tokens": 10,
+          "generation_seconds": 7.476
+        },
+        {
+          "item_id": "H07",
+          "status": "abstained",
+          "response_text": "**I cannot answer from the given context.**",
+          "input_tokens": 855,
+          "new_tokens": 10,
+          "generation_seconds": 7.029
+        }
+      ],
+      "summary": {
+        "n_answered": 3,
+        "n_abstained": 4,
+        "n_empty": 0,
+        "answer_rate": 0.429
+      }
+    }
+  }
+}

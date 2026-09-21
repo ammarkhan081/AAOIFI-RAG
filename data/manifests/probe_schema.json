@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "probe_schema.json",
+  "title": "AAOIFI Stage 1 Unanswerable / Escalation Probe",
+  "description": "Schema for data/probes/unanswerable_probes.jsonl - the mechanically labelled NEGATIVE class. A probe is not a hard-set item and must never be merged into data/private/hard_set.jsonl: its label is a fact about the corpus (or, for cross_standard_comparison, an explicitly stipulated definition), not a scholar judgement about Shari'ah. The vocabularies below deliberately do not overlap hard_set_schema.json on 'answerability' or 'status', so the two classes cannot be silently pooled. Probe questions are authored by this project and contain no AAOIFI clause prose, which is why data/probes/ is tracked while data/private/ is not. Generated and verified by scripts/build_unanswerable_probes.py; re-verified against the live corpus by aaoifi_rag.reporting.probes.verify_probes.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "probe_id",
+    "question_text",
+    "expected_behavior",
+    "unanswerable_basis",
+    "basis_evidence",
+    "verification_basis",
+    "requires_scholar",
+    "notes"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "unanswerable_probe_v1",
+      "description": "Bumped when the probe field set changes."
+    },
+    "probe_id": {
+      "type": "string",
+      "pattern": "^(U-TERM|U-STD|U-CLAUSE|E-CROSS)-[0-9]{2}$",
+      "description": "Prefix encodes the basis. U- probes expect abstain, E- probes expect escalate. Disjoint from hard-set item_ids (H01..H07) so the two sets can never collide in a metrics table."
+    },
+    "question_text": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Authored by this project. standard_absent_from_corpus probes name a standard by NUMBER ONLY and assert nothing about its subject matter, because AAOIFI's wider catalogue cannot be verified from this repository's files."
+    },
+    "expected_behavior": {
+      "enum": ["abstain", "escalate"],
+      "description": "Never 'answer'. Determined by unanswerable_basis, not authored independently: the three factual bases expect abstain, the stipulated cross-standard basis expects escalate."
+    },
+    "unanswerable_basis": {
+      "enum": [
+        "term_absent_from_corpus",
+        "standard_absent_from_corpus",
+        "clause_absent_from_standard",
+        "cross_standard_comparison"
+      ],
+      "description": "The first three are facts about the corpus. The fourth is a stipulation and carries the 'stipulation' block."
+    },
+    "basis_evidence": {
+      "type": "object",
+      "description": "Re-derivable justification; shape depends on unanswerable_basis. Only fields that verify_probe actually recomputes belong here - an unchecked count would be exactly the stale label this design prevents.",
+      "oneOf": [
+        {
+          "additionalProperties": false,
+          "required": ["term", "corpus_occurrences", "of_chunks", "match_rule"],
+          "properties": {
+            "term": {"type": "string", "minLength": 1},
+            "corpus_occurrences": {"const": 0, "description": "Chunks containing the term as a whole word. Must be 0 or the probe is answerable."},
+            "of_chunks": {"type": "integer", "minimum": 1, "description": "Corpus size at build time. A mismatch means the corpus changed and the probe must be rebuilt."},
+            "match_rule": {"type": "string"}
+          }
+        },
+        {
+          "additionalProperties": false,
+          "required": ["named_standard", "indexed_standards"],
+          "properties": {
+            "named_standard": {"type": "string", "description": "Must NOT appear in indexed_standards."},
+            "indexed_standards": {"type": "array", "items": {"type": "string"}, "minItems": 1}
+          }
+        },
+        {
+          "additionalProperties": false,
+          "required": ["standard_id", "clause_id"],
+          "properties": {
+            "standard_id": {"enum": ["SS8", "SS9", "SS13", "SS17", "SS26"], "description": "Must BE indexed; otherwise use standard_absent_from_corpus."},
+            "clause_id": {"type": "string", "description": "Must not exist in that standard."}
+          }
+        },
+        {
+          "additionalProperties": false,
+          "required": ["standard_ids", "n_standards_required"],
+          "properties": {
+            "standard_ids": {"type": "array", "items": {"enum": ["SS8", "SS9", "SS13", "SS17", "SS26"]}, "minItems": 2, "uniqueItems": true},
+            "n_standards_required": {"type": "integer", "minimum": 2}
+          }
+        }
+      ]
+    },
+    "verification_basis": {
+      "enum": ["mechanical_corpus_absence", "stipulated_definition"],
+      "description": "Both are strictly weaker than corpus_cross_reference and neither is qualified_scholar_review. Widening aaoifi_rag.reporting.evaluation.VERIFICATION_BASES to admit them does not change is_scholar_validated, which remains gated on qualified_scholar_review alone."
+    },
+    "requires_scholar": {
+      "const": false,
+      "description": "False for every probe by construction. This is the entire reason the negative class can be built in Stage 1 without expert time."
+    },
+    "notes": {"type": "string"},
+    "stipulation": {
+      "type": "object",
+      "description": "Present if and only if unanswerable_basis is cross_standard_comparison. Repeated in full on every such probe so a stray probe file still carries its own caveat.",
+      "additionalProperties": false,
+      "required": ["stipulation_id", "definition", "warning", "verification_basis"],
+      "properties": {
+        "stipulation_id": {"const": "cross_standard_comparison_v1"},
+        "definition": {"type": "string"},
+        "warning": {"type": "string", "description": "States that escalation precision and recall are conditional on accepting the definition."},
+        "verification_basis": {"const": "stipulated_definition"}
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"unanswerable_basis": {"const": "cross_standard_comparison"}}, "required": ["unanswerable_basis"]},
+      "then": {"required": ["stipulation"], "properties": {"expected_behavior": {"const": "escalate"}, "verification_basis": {"const": "stipulated_definition"}}},
+      "else": {"not": {"required": ["stipulation"]}, "properties": {"expected_behavior": {"const": "abstain"}, "verification_basis": {"const": "mechanical_corpus_absence"}}}
+    }
+  ]
+}

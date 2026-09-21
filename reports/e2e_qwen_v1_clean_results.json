@@ -1,0 +1,367 @@
+{
+  "experiment": "e2e_batch_smoke",
+  "timestamp": "2026-09-16T08:33:20.670850+00:00",
+  "retrieval": {
+    "type": "fixed_jais2_contexts"
+  },
+  "generation": {
+    "model_id": "Qwen/Qwen2.5-7B-Instruct",
+    "hub_revision": null,
+    "do_sample": false,
+    "max_new_tokens": 512,
+    "seed": 42,
+    "deterministic_algorithms": false
+  },
+  "items": [
+    {
+      "item_id": "H01",
+      "stages": [
+        {
+          "stage": "retrieve",
+          "entered": true,
+          "seconds": 2.1e-05,
+          "detail": "records=5 k=5"
+        },
+        {
+          "stage": "gate_retrieval",
+          "entered": true,
+          "seconds": 0.000103,
+          "detail": "decision=answer gate=None"
+        },
+        {
+          "stage": "build_prompt",
+          "entered": true,
+          "seconds": 7.2e-05,
+          "detail": "version=answer_context_only_v1 context_size=5 leak_guard=passed"
+        },
+        {
+          "stage": "generate",
+          "entered": true,
+          "seconds": 15.593323,
+          "detail": "new_tokens=113 truncated=False"
+        },
+        {
+          "stage": "signals",
+          "entered": true,
+          "seconds": 0.002676,
+          "detail": "class=answered echo=0.3375 citations_passed=True"
+        },
+        {
+          "stage": "route",
+          "entered": true,
+          "seconds": 0.000115,
+          "detail": "decision=answer gate=None"
+        }
+      ],
+      "decision": "answer",
+      "served_answer": "Under AAOIFI SS8, if a Murabahah is carried out by means of syndicated financing, the Institution which acts as the arranger of the syndicate is entitled to an arrangement fee to be paid by the participants in the syndicate. This is in accordance with [1] SS8 §2/4/4. \n\nThis does not directly address SS8's rules on a commitment fee and a fee for providing a credit facility. Therefore, I cannot fully answer how this sits with those specific rules based solely on the provided excerpts.",
+      "generation": {
+        "text": "Under AAOIFI SS8, if a Murabahah is carried out by means of syndicated financing, the Institution which acts as the arranger of the syndicate is entitled to an arrangement fee to be paid by the participants in the syndicate. This is in accordance with [1] SS8 §2/4/4. \n\nThis does not directly address SS8's rules on a commitment fee and a fee for providing a credit facility. Therefore, I cannot fully answer how this sits with those specific rules based solely on the provided excerpts.",
+        "input_tokens": 680,
+        "new_tokens": 113,
+        "seconds": 15.593,
+        "truncated": false
+      }
+    },
+    {
+      "item_id": "H02",
+      "stages": [
+        {
+          "stage": "retrieve",
+          "entered": true,
+          "seconds": 2.2e-05,
+          "detail": "records=5 k=5"
+        },
+        {
+          "stage": "gate_retrieval",
+          "entered": true,
+          "seconds": 3.7e-05,
+          "detail": "decision=answer gate=None"
+        },
+        {
+          "stage": "build_prompt",
+          "entered": true,
+          "seconds": 3.5e-05,
+          "detail": "version=answer_context_only_v1 context_size=5 leak_guard=passed"
+        },
+        {
+          "stage": "generate",
+          "entered": true,
+          "seconds": 4.809241,
+          "detail": "new_tokens=8 truncated=False"
+        },
+        {
+          "stage": "signals",
+          "entered": true,
+          "seconds": 0.001662,
+          "detail": "class=abstained echo=0.0000 citations_passed=True"
+        },
+        {
+          "stage": "route",
+          "entered": true,
+          "seconds": 0.000114,
+          "detail": "decision=abstain gate=model_did_not_abstain"
+        }
+      ],
+      "decision": "abstain",
+      "served_answer": null,
+      "generation": {
+        "text": "I cannot answer from the given context",
+        "input_tokens": 717,
+        "new_tokens": 8,
+        "seconds": 4.809,
+        "truncated": false
+      }
+    },
+    {
+      "item_id": "H03",
+      "stages": [
+        {
+          "stage": "retrieve",
+          "entered": true,
+          "seconds": 1.1e-05,
+          "detail": "records=5 k=5"
+        },
+        {
+          "stage": "gate_retrieval",
+          "entered": true,
+          "seconds": 5.3e-05,
+          "detail": "decision=answer gate=None"
+        },
+        {
+          "stage": "build_prompt",
+          "entered": true,
+          "seconds": 4.2e-05,
+          "detail": "version=answer_context_only_v1 context_size=5 leak_guard=passed"
+        },
+        {
+          "stage": "generate",
+          "entered": true,
+          "seconds": 10.809199,
+          "detail": "new_tokens=61 truncated=False"
+        },
+        {
+          "stage": "signals",
+          "entered": true,
+          "seconds": 0.001231,
+          "detail": "class=answered echo=0.1579 citations_passed=False"
+        },
+        {
+          "stage": "route",
+          "entered": true,
+          "seconds": 0.0001,
+          "detail": "decision=escalate gate=citation_integrity"
+        }
+      ],
+      "decision": "escalate",
+      "served_answer": null,
+      "generation": {
+        "text": "Under AAOIFI SS13, the capital provider may obtain guarantees from the Mudarib, provided that the guarantees are adequate and enforceable. These guarantees may only be enforced by the capital provider in cases of misconduct, negligence, or breach of contract on the part of the Mudarib.",
+        "input_tokens": 841,
+        "new_tokens": 61,
+        "seconds": 10.809,
+        "truncated": false
+      }
+    },
+    {
+      "item_id": "H04",
+      "stages": [
+        {
+          "stage": "retrieve",
+          "entered": true,
+          "seconds": 1.4e-05,
+          "detail": "records=5 k=5"
+        },
+        {
+          "stage": "gate_retrieval",
+          "entered": true,
+          "seconds": 4.5e-05,
+          "detail": "decision=answer gate=None"
+        },
+        {
+          "stage": "build_prompt",
+          "entered": true,
+          "seconds": 3e-05,
+          "detail": "version=answer_context_only_v1 context_size=5 leak_guard=passed"
+        },
+        {
+          "stage": "generate",
+          "entered": true,
+          "seconds": 3.952411,
+          "detail": "new_tokens=8 truncated=False"
+        },
+        {
+          "stage": "signals",
+          "entered": true,
+          "seconds": 0.000755,
+          "detail": "class=abstained echo=0.0000 citations_passed=True"
+        },
+        {
+          "stage": "route",
+          "entered": true,
+          "seconds": 7.7e-05,
+          "detail": "decision=abstain gate=model_did_not_abstain"
+        }
+      ],
+      "decision": "abstain",
+      "served_answer": null,
+      "generation": {
+        "text": "I cannot answer from the given context",
+        "input_tokens": 567,
+        "new_tokens": 8,
+        "seconds": 3.952,
+        "truncated": false
+      }
+    },
+    {
+      "item_id": "H05",
+      "stages": [
+        {
+          "stage": "retrieve",
+          "entered": true,
+          "seconds": 1.6e-05,
+          "detail": "records=5 k=5"
+        },
+        {
+          "stage": "gate_retrieval",
+          "entered": true,
+          "seconds": 3.8e-05,
+          "detail": "decision=answer gate=None"
+        },
+        {
+          "stage": "build_prompt",
+          "entered": true,
+          "seconds": 3.7e-05,
+          "detail": "version=answer_context_only_v1 context_size=5 leak_guard=passed"
+        },
+        {
+          "stage": "generate",
+          "entered": true,
+          "seconds": 11.333913,
+          "detail": "new_tokens=74 truncated=False"
+        },
+        {
+          "stage": "signals",
+          "entered": true,
+          "seconds": 0.001257,
+          "detail": "class=answered echo=0.0612 citations_passed=False"
+        },
+        {
+          "stage": "route",
+          "entered": true,
+          "seconds": 9.6e-05,
+          "detail": "decision=escalate gate=citation_integrity"
+        }
+      ],
+      "decision": "escalate",
+      "served_answer": null,
+      "generation": {
+        "text": "The relationship between the company and the policyholders’ fund is a Wakalah relationship for management, and a Mudarabah or investment agency relationship for the investment of the fund’s assets. Treating both management and investment as Mudarabah only, with no Wakalah component, would not match this description as it would exclude the Wakalah aspect for management.",
+        "input_tokens": 680,
+        "new_tokens": 74,
+        "seconds": 11.334,
+        "truncated": false
+      }
+    },
+    {
+      "item_id": "H06",
+      "stages": [
+        {
+          "stage": "retrieve",
+          "entered": true,
+          "seconds": 2e-05,
+          "detail": "records=5 k=5"
+        },
+        {
+          "stage": "gate_retrieval",
+          "entered": true,
+          "seconds": 3.4e-05,
+          "detail": "decision=answer gate=None"
+        },
+        {
+          "stage": "build_prompt",
+          "entered": true,
+          "seconds": 3.7e-05,
+          "detail": "version=answer_context_only_v1 context_size=5 leak_guard=passed"
+        },
+        {
+          "stage": "generate",
+          "entered": true,
+          "seconds": 5.758762,
+          "detail": "new_tokens=8 truncated=False"
+        },
+        {
+          "stage": "signals",
+          "entered": true,
+          "seconds": 0.00115,
+          "detail": "class=abstained echo=0.0000 citations_passed=True"
+        },
+        {
+          "stage": "route",
+          "entered": true,
+          "seconds": 7.1e-05,
+          "detail": "decision=abstain gate=model_did_not_abstain"
+        }
+      ],
+      "decision": "abstain",
+      "served_answer": null,
+      "generation": {
+        "text": "I cannot answer from the given context",
+        "input_tokens": 829,
+        "new_tokens": 8,
+        "seconds": 5.759,
+        "truncated": false
+      }
+    },
+    {
+      "item_id": "H07",
+      "stages": [
+        {
+          "stage": "retrieve",
+          "entered": true,
+          "seconds": 1.7e-05,
+          "detail": "records=5 k=5"
+        },
+        {
+          "stage": "gate_retrieval",
+          "entered": true,
+          "seconds": 3.6e-05,
+          "detail": "decision=answer gate=None"
+        },
+        {
+          "stage": "build_prompt",
+          "entered": true,
+          "seconds": 3.4e-05,
+          "detail": "version=answer_context_only_v1 context_size=5 leak_guard=passed"
+        },
+        {
+          "stage": "generate",
+          "entered": true,
+          "seconds": 20.34087,
+          "detail": "new_tokens=150 truncated=False"
+        },
+        {
+          "stage": "signals",
+          "entered": true,
+          "seconds": 0.001347,
+          "detail": "class=answered echo=0.2844 citations_passed=False"
+        },
+        {
+          "stage": "route",
+          "entered": true,
+          "seconds": 8.7e-05,
+          "detail": "decision=escalate gate=citation_integrity"
+        }
+      ],
+      "decision": "escalate",
+      "served_answer": null,
+      "generation": {
+        "text": "An asset may be acquired by a party and then leased to that party. In this case, the Ijarah transaction should not be stipulated as a condition of the purchase contract by which the Institution acquires the asset.\n\nBased on the provided excerpt, an Islamic bank buying an asset from a customer and immediately leasing it back to the same customer would not satisfy AAOIFI's Ijarah standard because the Ijarah transaction should not be stipulated as a condition of the purchase contract. There needs to be a separation between the acquisition and the leaseback to avoid the contract being seen as a mere formality or a way to circumvent the Ijarah rules. Therefore, the scenario described does not meet the AAOIFI standards.",
+        "input_tokens": 756,
+        "new_tokens": 150,
+        "seconds": 20.341,
+        "truncated": false
+      }
+    }
+  ]
+}

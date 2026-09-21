@@ -1,0 +1,67 @@
+{
+  "_comment": "File hashes must be computed from the real, researcher-supplied PDFs after they are present in data/private/. Do not enter placeholder or guessed hash values.",
+  "manifest_version": "1.0",
+  "scope": "Stage 1 English-only AAOIFI source inventory",
+  "standards": [
+    {
+      "standard_id": "SS8",
+      "title": "Murabahah",
+      "official_url": "https://aaoifi.com/ss-8-murabahah/?lang=en",
+      "edition_date": "unconfirmed",
+      "filename": "SS-8-Murabahah.pdf",
+      "file_hash": "e955ba72841d29e9bf2fdec023825f36918bae5557a31de55d912b6fb8ad425a",
+      "hash_algorithm": "SHA-256",
+      "license_status": "Publicly accessible source; raw text is excluded from public repositories. Edition-specific terms are TBD - pending the official PDF.",
+      "date_added": "2026-08-26",
+      "added_by": "researcher"
+    },
+    {
+      "standard_id": "SS9",
+      "title": "Ijarah and Ijarah Muntahia Bittamleek",
+      "official_url": "https://aaoifi.com/wp-content/uploads/2020/08/SS-9-Ijarah-and-Ijarah-Muntahia-Bittamleek.pdf",
+      "edition_date": "(Revised Standard); edition date unconfirmed",
+      "filename": "SS-9-Ijarah-and-Ijarah-Muntahia-Bittamleek.pdf",
+      "file_hash": "57587f11dcb9c9243fda72016b6fdf8b82416e3d1d40c594da0298e2b87a3dbf",
+      "hash_algorithm": "SHA-256",
+      "license_status": "Publicly accessible source; raw text is excluded from public repositories. Edition-specific terms are TBD - pending the official PDF.",
+      "date_added": "2026-08-26",
+      "added_by": "researcher"
+    },
+    {
+      "standard_id": "SS13",
+      "title": "Mudarabah",
+      "official_url": "https://aaoifi.com/s-13-mudarabah/?lang=en",
+      "edition_date": "unconfirmed",
+      "filename": "SS-13-Mudarabah.pdf",
+      "file_hash": "246a08cc32c2f1140951a90b5339fb5ec4efd3bd6f86f4fb227f40e1a3d8195b",
+      "hash_algorithm": "SHA-256",
+      "license_status": "Publicly accessible source; raw text is excluded from public repositories. Edition-specific terms are TBD - pending the official PDF.",
+      "date_added": "2026-08-26",
+      "added_by": "researcher"
+    },
+    {
+      "standard_id": "SS17",
+      "title": "Investment Sukuk",
+      "official_url": "https://aaoifi.com/ss-17-investment-sukuk/?lang=en",
+      "edition_date": "unconfirmed",
+      "filename": "SS-17-Investment-Sukuk.pdf",
+      "file_hash": "b21c495a98dbbbf7263b3f9c8cb8d8fcb02ed414df6a75ed09196aefddf1c3cf",
+      "hash_algorithm": "SHA-256",
+      "license_status": "Publicly accessible source; raw text is excluded from public repositories. Edition-specific terms are TBD - pending the official PDF.",
+      "date_added": "2026-08-26",
+      "added_by": "researcher"
+    },
+    {
+      "standard_id": "SS26",
+      "title": "Islamic Insurance",
+      "official_url": "https://aaoifi.com/ss-26-islamic-insurance/?lang=en",
+      "edition_date": "unconfirmed",
+      "filename": "SS-26-Islamic-Insurance.pdf",
+      "file_hash": "b6321f6f725e6b94c363bfa52599a76ba497e1983993c107468657d0f5f71333",
+      "hash_algorithm": "SHA-256",
+      "license_status": "Publicly accessible source; raw text is excluded from public repositories. Edition-specific terms are TBD - pending the official PDF.",
+      "date_added": "2026-08-26",
+      "added_by": "researcher"
+    }
+  ]
+}

@@ -1,0 +1,416 @@
+{
+  "source": "scripts/audit_gate_sensitivity.py",
+  "evidence": "stored n=7 Colab run, replayed with frozen signals",
+  "policy": {
+    "policy_version": "gates_v1",
+    "max_echo_ratio": 0.85,
+    "enable_echo_gate": true,
+    "enable_heading_only_gate": true,
+    "enable_citation_gate": true,
+    "enable_script_gate": true,
+    "enable_degenerate_decoding_gate": true,
+    "enable_clause_grounding_gate": true,
+    "min_reranker_top_1": null,
+    "enable_reranker_top_1_gate": false,
+    "min_reranker_margin": null,
+    "enable_reranker_margin_gate": false,
+    "min_anchor_coverage": null,
+    "enable_anchoring_gate": false
+  },
+  "threshold_sensitivity": {
+    "max_echo_ratio": {
+      "field_name": "max_echo_ratio",
+      "shipped_value": 0.85,
+      "n_items": 7,
+      "n_items_evaluable": 3,
+      "observed_values": [
+        0.4430379746835443,
+        0.717391304347826,
+        0.9
+      ],
+      "n_distinct_routings": 3,
+      "is_decision_relevant": true,
+      "stable_interval": {
+        "lower": 0.4430379756835443,
+        "upper": 0.9,
+        "width": 0.4569620243164557,
+        "meaning": "every threshold in this interval produces routing identical to max_echo_ratio=0.85; the bounds are the adjacent observed signal values, so the interval is exact, not sampled"
+      },
+      "flips": [
+        {
+          "item_id": "H01",
+          "threshold_below": 0.4430379746835443,
+          "threshold_at_or_above": 0.4430379756835443,
+          "decision_below": "escalate",
+          "decision_at_or_above": "answer"
+        },
+        {
+          "item_id": "H03",
+          "threshold_below": 0.9,
+          "threshold_at_or_above": 0.900000001,
+          "decision_below": "escalate",
+          "decision_at_or_above": "answer"
+        }
+      ],
+      "points": [
+        {
+          "threshold": 0.0,
+          "is_shipped_value": false,
+          "n_answer": 0,
+          "n_abstain": 4,
+          "n_escalate": 3,
+          "n_agree": 0,
+          "decisions": {
+            "H01": "escalate",
+            "H02": "abstain",
+            "H03": "escalate",
+            "H04": "abstain",
+            "H05": "escalate",
+            "H06": "abstain",
+            "H07": "abstain"
+          }
+        },
+        {
+          "threshold": 0.4430379746835443,
+          "is_shipped_value": false,
+          "n_answer": 0,
+          "n_abstain": 4,
+          "n_escalate": 3,
+          "n_agree": 0,
+          "decisions": {
+            "H01": "escalate",
+            "H02": "abstain",
+            "H03": "escalate",
+            "H04": "abstain",
+            "H05": "escalate",
+            "H06": "abstain",
+            "H07": "abstain"
+          }
+        },
+        {
+          "threshold": 0.4430379756835443,
+          "is_shipped_value": false,
+          "n_answer": 1,
+          "n_abstain": 4,
+          "n_escalate": 2,
+          "n_agree": 1,
+          "decisions": {
+            "H01": "answer",
+            "H02": "abstain",
+            "H03": "escalate",
+            "H04": "abstain",
+            "H05": "escalate",
+            "H06": "abstain",
+            "H07": "abstain"
+          }
+        },
+        {
+          "threshold": 0.717391304347826,
+          "is_shipped_value": false,
+          "n_answer": 1,
+          "n_abstain": 4,
+          "n_escalate": 2,
+          "n_agree": 1,
+          "decisions": {
+            "H01": "answer",
+            "H02": "abstain",
+            "H03": "escalate",
+            "H04": "abstain",
+            "H05": "escalate",
+            "H06": "abstain",
+            "H07": "abstain"
+          }
+        },
+        {
+          "threshold": 0.717391305347826,
+          "is_shipped_value": false,
+          "n_answer": 1,
+          "n_abstain": 4,
+          "n_escalate": 2,
+          "n_agree": 1,
+          "decisions": {
+            "H01": "answer",
+            "H02": "abstain",
+            "H03": "escalate",
+            "H04": "abstain",
+            "H05": "escalate",
+            "H06": "abstain",
+            "H07": "abstain"
+          }
+        },
+        {
+          "threshold": 0.85,
+          "is_shipped_value": true,
+          "n_answer": 1,
+          "n_abstain": 4,
+          "n_escalate": 2,
+          "n_agree": 1,
+          "decisions": {
+            "H01": "answer",
+            "H02": "abstain",
+            "H03": "escalate",
+            "H04": "abstain",
+            "H05": "escalate",
+            "H06": "abstain",
+            "H07": "abstain"
+          }
+        },
+        {
+          "threshold": 0.9,
+          "is_shipped_value": false,
+          "n_answer": 1,
+          "n_abstain": 4,
+          "n_escalate": 2,
+          "n_agree": 1,
+          "decisions": {
+            "H01": "answer",
+            "H02": "abstain",
+            "H03": "escalate",
+            "H04": "abstain",
+            "H05": "escalate",
+            "H06": "abstain",
+            "H07": "abstain"
+          }
+        },
+        {
+          "threshold": 0.900000001,
+          "is_shipped_value": false,
+          "n_answer": 2,
+          "n_abstain": 4,
+          "n_escalate": 1,
+          "n_agree": 2,
+          "decisions": {
+            "H01": "answer",
+            "H02": "abstain",
+            "H03": "answer",
+            "H04": "abstain",
+            "H05": "escalate",
+            "H06": "abstain",
+            "H07": "abstain"
+          }
+        },
+        {
+          "threshold": 1.0,
+          "is_shipped_value": false,
+          "n_answer": 2,
+          "n_abstain": 4,
+          "n_escalate": 1,
+          "n_agree": 2,
+          "decisions": {
+            "H01": "answer",
+            "H02": "abstain",
+            "H03": "answer",
+            "H04": "abstain",
+            "H05": "escalate",
+            "H06": "abstain",
+            "H07": "abstain"
+          }
+        }
+      ],
+      "method": "exact_enumeration_over_observed_signal_values",
+      "limitation": "the transition points are the 3 observed signal values on this evidence set; a wide stable interval reflects how few values were observed and is NOT evidence that the threshold is well chosen"
+    }
+  },
+  "ablation_lattice": {
+    "n_items": 7,
+    "n_enabled_gates": 10,
+    "enabled_gate_names": [
+      "retrieval_non_empty",
+      "retrieval_normative",
+      "response_present",
+      "model_did_not_abstain",
+      "no_self_contradiction",
+      "citation_integrity",
+      "clause_grounding",
+      "script_integrity",
+      "no_degenerate_decoding",
+      "substantive_answer"
+    ],
+    "disabled_gate_names": [
+      "lexical_anchoring",
+      "reranker_top_1",
+      "reranker_margin"
+    ],
+    "n_subsets_evaluated": 1024,
+    "n_distinct_routings": 8,
+    "full_routing": {
+      "H01": "answer",
+      "H02": "abstain",
+      "H03": "escalate",
+      "H04": "abstain",
+      "H05": "escalate",
+      "H06": "abstain",
+      "H07": "abstain"
+    },
+    "load_bearing_gates": [
+      "model_did_not_abstain",
+      "substantive_answer"
+    ],
+    "unexercised_gates": [
+      "retrieval_non_empty",
+      "retrieval_normative",
+      "response_present",
+      "no_self_contradiction",
+      "citation_integrity",
+      "clause_grounding",
+      "script_integrity",
+      "no_degenerate_decoding"
+    ],
+    "minimal_sufficient_size": 3,
+    "minimal_sufficient_subsets": [
+      [
+        "model_did_not_abstain",
+        "no_self_contradiction",
+        "substantive_answer"
+      ],
+      [
+        "model_did_not_abstain",
+        "citation_integrity",
+        "substantive_answer"
+      ],
+      [
+        "model_did_not_abstain",
+        "script_integrity",
+        "substantive_answer"
+      ]
+    ],
+    "contributions": [
+      {
+        "gate_name": "retrieval_non_empty",
+        "stage": "retrieval",
+        "decision_if_failed": "abstain",
+        "evidentiary_basis": "prompt_contract_untested_at_n7",
+        "n_items_triggering": 0,
+        "n_items_changed_when_removed": 0,
+        "changed_items": [],
+        "decision_shifts": [],
+        "is_load_bearing": false,
+        "reading": "UNEXERCISED on this evidence - removing it changes nothing here, which is a statement about the items available, not about the gate"
+      },
+      {
+        "gate_name": "retrieval_normative",
+        "stage": "retrieval",
+        "decision_if_failed": "abstain",
+        "evidentiary_basis": "prompt_contract_untested_at_n7",
+        "n_items_triggering": 0,
+        "n_items_changed_when_removed": 0,
+        "changed_items": [],
+        "decision_shifts": [],
+        "is_load_bearing": false,
+        "reading": "UNEXERCISED on this evidence - removing it changes nothing here, which is a statement about the items available, not about the gate"
+      },
+      {
+        "gate_name": "response_present",
+        "stage": "response",
+        "decision_if_failed": "abstain",
+        "evidentiary_basis": "prompt_contract_untested_at_n7",
+        "n_items_triggering": 0,
+        "n_items_changed_when_removed": 0,
+        "changed_items": [],
+        "decision_shifts": [],
+        "is_load_bearing": false,
+        "reading": "UNEXERCISED on this evidence - removing it changes nothing here, which is a statement about the items available, not about the gate"
+      },
+      {
+        "gate_name": "model_did_not_abstain",
+        "stage": "response",
+        "decision_if_failed": "abstain",
+        "evidentiary_basis": "observed_in_n7_run",
+        "n_items_triggering": 4,
+        "n_items_changed_when_removed": 4,
+        "changed_items": [
+          "H02",
+          "H04",
+          "H06",
+          "H07"
+        ],
+        "decision_shifts": [
+          "H02: abstain -> answer",
+          "H04: abstain -> answer",
+          "H06: abstain -> answer",
+          "H07: abstain -> answer"
+        ],
+        "is_load_bearing": true,
+        "reading": "load-bearing on this evidence"
+      },
+      {
+        "gate_name": "no_self_contradiction",
+        "stage": "response",
+        "decision_if_failed": "escalate",
+        "evidentiary_basis": "observed_in_n7_run",
+        "n_items_triggering": 1,
+        "n_items_changed_when_removed": 0,
+        "changed_items": [],
+        "decision_shifts": [],
+        "is_load_bearing": false,
+        "reading": "UNEXERCISED on this evidence - removing it changes nothing here, which is a statement about the items available, not about the gate"
+      },
+      {
+        "gate_name": "citation_integrity",
+        "stage": "response",
+        "decision_if_failed": "escalate",
+        "evidentiary_basis": "observed_in_n7_run",
+        "n_items_triggering": 1,
+        "n_items_changed_when_removed": 0,
+        "changed_items": [],
+        "decision_shifts": [],
+        "is_load_bearing": false,
+        "reading": "UNEXERCISED on this evidence - removing it changes nothing here, which is a statement about the items available, not about the gate"
+      },
+      {
+        "gate_name": "clause_grounding",
+        "stage": "response",
+        "decision_if_failed": "escalate",
+        "evidentiary_basis": "prompt_contract_untested_at_n7",
+        "n_items_triggering": 0,
+        "n_items_changed_when_removed": 0,
+        "changed_items": [],
+        "decision_shifts": [],
+        "is_load_bearing": false,
+        "reading": "UNEXERCISED on this evidence - removing it changes nothing here, which is a statement about the items available, not about the gate"
+      },
+      {
+        "gate_name": "script_integrity",
+        "stage": "response",
+        "decision_if_failed": "escalate",
+        "evidentiary_basis": "observed_in_n7_run",
+        "n_items_triggering": 1,
+        "n_items_changed_when_removed": 0,
+        "changed_items": [],
+        "decision_shifts": [],
+        "is_load_bearing": false,
+        "reading": "UNEXERCISED on this evidence - removing it changes nothing here, which is a statement about the items available, not about the gate"
+      },
+      {
+        "gate_name": "no_degenerate_decoding",
+        "stage": "response",
+        "decision_if_failed": "escalate",
+        "evidentiary_basis": "prompt_contract_untested_at_n7",
+        "n_items_triggering": 0,
+        "n_items_changed_when_removed": 0,
+        "changed_items": [],
+        "decision_shifts": [],
+        "is_load_bearing": false,
+        "reading": "UNEXERCISED on this evidence - removing it changes nothing here, which is a statement about the items available, not about the gate"
+      },
+      {
+        "gate_name": "substantive_answer",
+        "stage": "response",
+        "decision_if_failed": "escalate",
+        "evidentiary_basis": "observed_in_n7_run",
+        "n_items_triggering": 1,
+        "n_items_changed_when_removed": 1,
+        "changed_items": [
+          "H03"
+        ],
+        "decision_shifts": [
+          "H03: escalate -> answer"
+        ],
+        "is_load_bearing": true,
+        "reading": "load-bearing on this evidence"
+      }
+    ],
+    "interpretation": "2 of 10 enabled gates change at least one decision on these 7 items; 3 gate(s) suffice to reproduce the shipped routing exactly. The remainder are unexercised by this evidence and must not be described as redundant: an unexercised gate is one whose failure mode did not occur in the sample.",
+    "limitation": "every figure here is conditional on the frozen signals supplied. A gate ablation cannot discover failure modes absent from the item set, and at small n most gates will be unexercised by construction."
+  }
+}
