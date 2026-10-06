@@ -7,7 +7,7 @@ This Stage-1 Research Prototype explores the limitations of standard Retrieval-A
 
 ### Key Discoveries
 - **Cross-Lingual Leakage (Instruction Collapse):** Discovered that bilingual models (e.g., Jais-2) hallucinate Arabic text (`الشيرازي`, `فرنسية`) when subjected to complex, multi-constraint English orchestration prompts.
-- **Deterministic Mitigation:** Implemented a 13-gate mechanical safety layer that successfully intercepts unsafe outputs and escalates them to human reviewers, achieving 100% safety interception on frontier models like Qwen-2.5.
+- **Deterministic Mitigation:** Implemented a 13-gate mechanical safety layer that routes each generation to `ANSWER`, `ABSTAIN` or `ESCALATE`. On the n=7 pilot, Qwen-2.5-7B (strict prompt) produced no unsafe answers (2/7 answered, 4/7 abstained, 1/7 self-contradiction escalated). n=7 is a proof of concept, not a statistically significant result; see `reports/final_research_prototype_deliverable.md` (Limitations).
 
 ## 📁 Repository Structure
 - `src/aaoifi_rag/`: Core pipeline, including generation, retrieval, and reliability gates.
