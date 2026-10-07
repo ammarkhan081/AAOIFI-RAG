@@ -1,5 +1,7 @@
 # Retrieval Ablation Results (n=7)
 
+> **Superseded (note added 2026-10-07):** the per-item recall values in this file do not agree with `reports/full_ablation_table.md` (2026-09-02), which counts 17 gold clauses across the 7 items and is consistent with the gold counts in `reports/reliability_signal_analysis_n7.md`. Cite `full_ablation_table.md` for numbers. This file is kept for history only.
+
 **Date**: 2026-08-30  
 **Purpose**: Isolated retrieval component testing to evaluate the contribution of each retrieval strategy (BM25, dense, reranker) to Clause Recall@5.  
 **Method**: Tested 5 retrieval configurations across all 7 hard-set items. Retrieval-only, no generation.  

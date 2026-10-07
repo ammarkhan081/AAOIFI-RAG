@@ -1,5 +1,7 @@
 # Prototype Summary
 
+> **Status note (added 2026-10-07):** this summary was last updated 2026-09-02 (Phase 2) and predates the Stage-1 deliverable. For current Stage-1 status see `reports/final_research_prototype_deliverable.md`; for retrieval numbers see `reports/full_ablation_table.md`.
+
 **Last Updated**: 2026-09-02  
 **Phase**: Phase 2 - Retrieval Prototype Complete
 

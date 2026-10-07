@@ -43,6 +43,8 @@ JSON `new_tokens`: **H01** 277 vs **H03** 25, both `response_class=answered`. Bi
 
 ## 6. Retrieval ablation: dense retrieval noise (n=7, descriptive)
 
+> **Superseded note (added 2026-10-07):** the Recall@5 figures in this section (Hybrid 0.67 on H04, all other configs 1.00) come from `reports/retrieval_ablation_n7.md`, which disagrees with the consolidated `reports/full_ablation_table.md` (Hybrid 0.571, tied with A and B'). Use the consolidated table for numbers; it also refers back to the H04 noise observation.
+
 **Retrieval ablation (2026-08-30):** Tested 5 retrieval configurations (A: fixed-token BM25, B: fixed-token BM25+rerank, B': clause-level BM25, B'+rerank, Hybrid: BM25∪dense+rerank) across all 7 hard-set items. Full details: `reports/retrieval_ablation_n7.md`.
 
 **Key finding (H04):** Hybrid config (BM25∪dense+rerank) performed strictly worse than all reranked-BM25-only configs. Dense retrieval added two irrelevant candidates (SS17 §5/1, §4/4) to the candidate pool; the reranker ranked these above the genuinely relevant SS17 §5/1/8/7, pushing it out of top-5. This caused Hybrid's Clause Recall@5 to drop to 0.67 while all other configs achieved 1.00.
