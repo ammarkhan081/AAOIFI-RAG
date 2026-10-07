@@ -9,7 +9,7 @@ We implemented a **selective-prediction architecture of 13 deterministic gates (
 
 ## C. Research Gap
 **Gap Addressed:** Standard RAG pipelines suffer from unmeasured hallucination risk, especially in high-stakes domains like Islamic Finance (AAOIFI compliance), where models frequently drop citations or suffer from language/instruction collapse.
-**Solution:** Our architecture explicitly intercepts unsafe generations before they reach the user, converting dangerous hallucinations into safe escalations.
+**Solution:** Our architecture mechanically checks each generation for citation failures, self-contradictions and other detectable defects before it reaches the user, and routes flagged outputs to abstention or human escalation. It cannot detect a fluent, correctly cited answer that is nonetheless wrong.
 
 ## D. Architecture
 1. **Retrieval Layer**: BM25 + BGE-M3 Dense Retriever (Top-K extraction).

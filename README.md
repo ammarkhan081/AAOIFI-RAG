@@ -1,6 +1,6 @@
 # Verifiable RAG & Selective Prediction Architecture for Financial Compliance
 
-> A deterministic 13-gate architecture (10 gates enabled by default) designed to mechanically intercept LLM hallucinations, citation failures, and self-contradictions in high-stakes domains (AAOIFI Islamic Finance).
+> A deterministic 13-gate architecture (10 gates enabled by default) designed to mechanically flag citation failures, self-contradictions, and other detectable defects in generated answers in a high-stakes domain (AAOIFI Islamic Finance). It cannot detect a fluent, correctly cited answer that is nonetheless wrong.
 
 ## 🚀 Research Overview
 This Stage-1 Research Prototype explores the limitations of standard Retrieval-Augmented Generation (RAG) when applied to rigid compliance domains. By freezing retrieval variables via a 2x2 ablation study, this project isolates and benchmarks generation safety.
