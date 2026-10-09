@@ -152,4 +152,4 @@ standard_summaries.json: 9ac0a0b1483d80c0380285eb8c6709c1dedfebed9b91662818eaf34
 
 ## References
 
-Reuter et al. "Summary-Augmented Chunking: Reducing Document-Level Retrieval Mismatch in RAG Systems." arXiv:2510.06999.
+Reuter et al. "Towards Reliable Retrieval in RAG Systems for Large Legal Datasets." Proceedings of the Natural Legal Language Processing Workshop 2025. arXiv:2510.06999.
