@@ -8,7 +8,7 @@ The end-to-end RAG architecture with deterministic safety routing is fully imple
 We implemented a **selective-prediction architecture of 13 deterministic gates (10 enabled by default; 5 were triggered by defects observed in the stored n=7 run)**. Rather than relying on an LLM's internal safety priors, this system mechanically verifies outputs (e.g., citation integrity, absence of self-contradiction, exact RAG reliance) and deterministically routes the generation into one of three buckets: `ANSWER`, `ABSTAIN`, or `ESCALATE` (human review).
 
 ## C. Research Gap
-**Gap Addressed:** Standard RAG pipelines suffer from unmeasured hallucination risk, especially in high-stakes domains like Islamic Finance (AAOIFI compliance), where models frequently drop citations or suffer from language/instruction collapse.
+**Gap Addressed:** Standard RAG pipelines suffer from unmeasured hallucination risk, especially in high-stakes domains like Islamic Finance (AAOIFI compliance), where, in this n=7 pilot, models sometimes dropped citations or emitted text in an unintended script.
 **Solution:** Our architecture mechanically checks each generation for citation failures, self-contradictions and other detectable defects before it reaches the user, and routes flagged outputs to abstention or human escalation. It cannot detect a fluent, correctly cited answer that is nonetheless wrong.
 
 ## D. Architecture
@@ -42,7 +42,7 @@ Metrics were computed deterministically against gold labels:
 - **Answer Rate**: 28.6% (2/7)
 - **Abstention Rate**: 57.1% (4/7)
 - **Escalation Rate**: 14.3% (1/7) 
-*Finding:* No served answer was flagged by the gates: both answered items (H03, H05) passed every enabled gate, which measures gate compliance, not answer correctness. The 4 abstentions were on items that are answerable by construction (see Limitation 3), so they count as over-abstention, not as correct abstention. Crucially, on H01, the model attempted to mix a partial answer with an abstention string—a dangerous self-contradiction that the `no_self_contradiction` gate successfully detected and escalated.
+*Finding:* No served answer was flagged by the gates: both answered items (H03, H05) passed every enabled gate, which measures gate compliance, not answer correctness. All 7 items are answerable, so the metric counts each abstention as over-abstention by construction. In the frozen contexts, however, only 9 of 17 gold clauses were in the top-5 (all gold for H07 only), so some of the 4 abstentions may be justified, with H07 the clearest over-abstention case. The 2 answered items also had incomplete gold retrieval (H03: 1 of 2; H05: 1 of 3), which the gates cannot detect. Crucially, on H01, the model attempted to mix a partial answer with an abstention string—a dangerous self-contradiction that the `no_self_contradiction` gate successfully detected and escalated.
 
 ## J. Limitations
 1. **Sample Size**: The $n=7$ scale is statistically insignificant. It serves only as a mechanical proof-of-concept for the architecture, not a generalized proof of model capability.
